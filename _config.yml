@@ -2,6 +2,9 @@
 title: Siteleaf
 timezone: America/New_York
 collections:
+  gallery:
+    title: Gallery
+    output: false
   posts:
     title: Posts
     output: true
@@ -21,20 +24,23 @@ defaults:
   values:
     permalink: "/blog/:title/"
     layout: post
-    image:
-    description:
+    image: 
+    description: 
     button:
-      title:
-      url:
+      title: 
+      url: 
 - scope:
     path: ''
     type: blog_tags
   values:
     layout: tag
+- scope:
+    path: ''
+    type: gallery
   values:
-    image:
-    link:
-baseurl: "/mynewBlog"
+    image: 
+    link: 
+baseurl: "/mynewBlog"    
 url: "https://jameswquinn.github.io"
 description: Built for developers, Loved by everyone. Supports Jekyll, user collaboration,
   publishing to AWS S3, GitHub Pages, FTP, and more.
@@ -64,10 +70,10 @@ excerpt_separator: |2+
 sass:
   sass_dir: styles/
   style: compressed
-per_page: 15
+per_page: 12
 date_format: "%b %d, %Y"
 google_analytics: UA-1666437-33
 twitter:
-  username: quinn
+  username: siteleaf
 logo: "/assets/logo.svg"
 future: true
