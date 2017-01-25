@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Add SSL to your site for free" />
+<meta name="description" content="It’s never been easier to jump aboard the HTTPS train and secure your site’s traffic. We’ll review our favorite options in this blog post, including CloudFront, Cloudflare, and Let’s Encrypt." />
+<meta property="og:description" content="It’s never been easier to jump aboard the HTTPS train and secure your site’s traffic. We’ll review our favorite options in this blog post, including CloudFront, Cloudflare, and Let’s Encrypt." />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/add-ssl-to-your-site-free/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/add-ssl-to-your-site-free/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta property="og:image" content="http://localhost:4000/myBlog/uploads/https.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-01-12T10:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@quinn" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Add SSL to your site for free",
+"image": "http://localhost:4000/myBlog/uploads/https.png",
+"datePublished": "2017-01-12T10:00:00-05:00",
+"description": "It’s never been easier to jump aboard the HTTPS train and secure your site’s traffic. We’ll review our favorite options in this blog post, including CloudFront, Cloudflare, and Let’s Encrypt.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/add-ssl-to-your-site-free/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <title>Add SSL to your site for free - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="post">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  <!-- blog permalink, inherit from first tag -->
+  
+  
+
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">Add SSL to your site for free</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+
+<article class="article">
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tip/" class="article__tag__link">Tip</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2017-01-12T10:00:00-05:00">Jan 12, 2017</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/myBlog/uploads/https.svg" alt="Add SSL to your site free" /></p>
+
+<p>Is your website encrypted?</p>
+
+<p>Back in 2014, Google announced it would begin using <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">HTTPS encryption as search ranking signal</a>. If you are still serving your site over basic HTTP in 2017, you may be missing a key part in your SEO strategy.</p>
+
+<p>The good news? It’s never been easier to jump aboard the HTTPS train and secure your traffic.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a> (also known as HTTP over <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>, or Transport Layer Security) uses SSL/TLS certificates to identify your website and encrypt data in transit to your website’s visitors.</p>
+
+<p>Google will be pushing further with the release of Chrome 56 later this month, <a href="https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html">announcing</a> it will mark all non-HTTPS pages containing password and credit card input fields as “Not Secure”. Eventually, Chrome plans to show a <a href="https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn">Not Secure warning for all pages served over HTTP</a>, regardless of whether or not the page contains sensitive input fields. Here’s what visitors will see in the new version:</p>
+
+<p><img src="/myBlog/uploads/chrome-https.png" alt="Treatment of HTTP pages with password or credit card form fields in Chrome 56" /></p>
+
+<p>There are several ways obtain an SSL certificate for your site — many of them are completely free, and only take a few minutes to set up. Since Siteleaf supports publishing to any web host, you can choose the option that best fits your needs.</p>
+
+<p>We’ll review our favorites in this blog post, starting with CloudFront (which we use ourselves for this blog).</p>
+
+<h2 id="1-cloudfront">1. CloudFront</h2>
+
+<p>Amazon Web Services offers free SSL certificates using their <a href="https://aws.amazon.com/certificate-manager/">Certificate Manager</a> tool which you can pair with <a href="https://aws.amazon.com/cloudfront/">CloudFront</a> to handle the delivery and encryption.</p>
+
+<p>AWS is an obvious choice if you are already using S3 for hosting, but it can also work nicely with GitHub Pages or any other external host. Along with HTTPS, you’ll be getting a global content delivery network (CDN) to accelerate your traffic.</p>
+
+<p>While the certificates are free, CloudFront does add a small cost, but its very affordable at <a href="https://aws.amazon.com/cloudfront/pricing/">a few pennies per GB</a> of bandwidth. Pro users will appreciate the powerful settings to control (or disable) cache, and the ability to <a href="http://www.cloudberrylab.com/blog/how-to-automatically-invalidate-dynamic-objects-in-amazon-cloudfront-using-aws-lambda/">automatically invalidate cached files from S3</a> using Lambda functions.</p>
+
+<p>Here are some tutorials to get set up with HTTPS and AWS:</p>
+
+<ul>
+  <li><a href="http://strd6.com/2016/02/github-pages-custom-domain-with-ssltls/">CloudFront with GitHub Pages</a></li>
+  <li><a href="https://blog.webinista.com/2016/02/enable-https-cloudfront-certificate-manager-s3/index.html">CloudFront with Amazon S3</a></li>
+  <li><a href="https://www.youtube.com/watch?v=5uS_rQjQ4Hw">CloudFront with Amazon S3 (Video)</a></li>
+</ul>
+
+<h2 id="2-cloudflare">2. Cloudflare</h2>
+
+<p><a href="https://www.cloudflare.com">Cloudflare</a> is another strong option giving you free SSL, a global CDN, as well as advanced security features like DDoS protection. It’s <a href="https://www.cloudflare.com/ssl/">completely free for personal sites</a>, and works with GitHub Pages, Amazon S3, and any other external host.</p>
+
+<p>If you are looking for a simple, straight forward setup, Cloudflare may be the choice for you.</p>
+
+<p>Here are some tutorials to get set up with HTTPS and Cloudflare:</p>
+
+<ul>
+  <li><a href="https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/">Cloudflare with GitHub Pages</a></li>
+  <li><a href="https://support.cloudflare.com/hc/en-us/articles/200168926-How-do-I-use-CloudFlare-with-Amazon-s-S3-Service-">Cloudflare with Amazon S3</a></li>
+</ul>
+
+<h2 id="3-lets-encrypt">3. Let’s Encrypt</h2>
+
+<p>If you publish to your own FTP or SFTP server, you can install a free SSL certificate from <a href="https://letsencrypt.org">Let’s Encrypt</a>, an automated and open certificate authority. Like CloudFront and Cloudflare, these certificates can be set up to automatically renew, so you’ll never have to worry about expiration dates.</p>
+
+<p>Here are some tutorials to get set up with HTTPS and Let’s Encrypt on a few popular web hosts:</p>
+
+<ul>
+  <li><a href="https://www.dreamhost.com/hosting/ssl-tls-certificates/">Let’s Encrypt with DreamHost</a></li>
+  <li><a href="https://mediatemple.net/community/products/dv/208603976/install-a-let's-encrypt-ssl">Let’s Encrypt with Media Temple</a></li>
+  <li><a href="https://www.digitalocean.com/community/tags/let-s-encrypt?type=tutorials">Let’s Encrypt with DigitalOcean</a></li>
+</ul>
+
+<p>Instructions may vary by host, so check your provider’s help docs for specific details on how to install an SSL certificate.</p>
+
+<hr />
+
+<p>Here’s to a happy and secure 2017!</p>
+
+    
+    
+  </section>
+</article>
+
+
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>

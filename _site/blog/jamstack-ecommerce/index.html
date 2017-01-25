@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="JAMstack e-commerce with Siteleaf &amp; Snipcart" />
+<meta name="description" content="How to use the JAMstack (JavaScript, APIs, &amp; Markup) to create a static site with e-commerce, powered by Siteleaf and Snipcart." />
+<meta property="og:description" content="How to use the JAMstack (JavaScript, APIs, &amp; Markup) to create a static site with e-commerce, powered by Siteleaf and Snipcart." />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/jamstack-ecommerce/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/jamstack-ecommerce/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta property="og:image" content="http://localhost:4000/myBlog/uploads/jamstack-ecommerce.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-10-25T10:00:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@quinn" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "JAMstack e-commerce with Siteleaf &amp; Snipcart",
+"image": "http://localhost:4000/myBlog/uploads/jamstack-ecommerce.png",
+"datePublished": "2016-10-25T10:00:00-04:00",
+"description": "How to use the JAMstack (JavaScript, APIs, &amp; Markup) to create a static site with e-commerce, powered by Siteleaf and Snipcart.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/jamstack-ecommerce/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <title>JAMstack e-commerce with Siteleaf & Snipcart - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="post">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  <!-- blog permalink, inherit from first tag -->
+  
+  
+
+<div class="headerWrap bg--blue">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">JAMstack e-commerce with Siteleaf & Snipcart</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+
+<article class="article">
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-25T10:00:00-04:00">Oct 25, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/uploads/jamstack-ecommerce.png" alt="" /></p>
+
+<p><em>This is a guest post by Charles Ouellet, co-founder of <a href="https://snipcart.com/">Snipcart</a>.</em></p>
+
+<p>If you’re reading this blog, you know static web development is trendy, to say the least. Unless you just got out of a years-long meditation retreat in a cave with no Internet. If that’s your case, well, hum, welcome back!</p>
+
+<p>At Snipcart, our developer-first shopping cart platform, we’ve been diving into static site generators and related tools for 2+ years now. And we believe <a href="https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/">they are the next big thing</a>.</p>
+
+<p>A short while ago, a friend of ours gave an <a href="https://vimeo.com/163522126">in-depth conference on why “static” is a bad word</a> for the modern front-end stack, aka the <strong>JAMstack</strong> (JavaScript, APIs, &amp; Markup).</p>
+
+<p>And he’s right:</p>
+
+<p><img src="/uploads/jamstack-ecommerce-static-definition.png" alt="Static definition" /></p>
+
+<p>There’s nothing “undesirable” or “uninteresting” about the modern static websites &amp; apps developers are pushing online. It’s in fact quite the opposite.</p>
+
+<p>As a community, we need to give this new paradigm a name worthy of its actual value, and that’s exactly what the <strong><a href="http://jamstack.org/">JAMstack</a></strong> is.</p>
+
+<p>But this post isn’t a philosophical essay on the benefits of the API economy and the modular development approach. It’s about putting together a killer e-commerce workflow that ticks all of the boxes on the JAMstack checklist:</p>
+
+<ul>
+  <li>Entire site on a CDN</li>
+  <li>Atomic deploys</li>
+  <li>Instant cache invalidation</li>
+  <li>Everything lives in Git</li>
+  <li>Automated builds</li>
+</ul>
+
+<p>So today, I’m going to show you how to build an <strong>API-centric, fast and secure e-commerce project</strong> in 5 simple steps. And I’m going to use the right JAMstack tools to do so.</p>
+
+<p>Let’s do it!</p>
+
+<h2 id="starting-notes">Starting notes</h2>
+
+<p>We’re going to use the following tools for our e-commerce JAMstack:</p>
+
+<ul>
+  <li><strong>Siteleaf</strong>, to manage our content</li>
+  <li><strong>Jekyll</strong>, to generate our static site</li>
+  <li><strong>Snipcart</strong>, to handle e-commerce</li>
+  <li><strong>React</strong>, to code a rich shopping feature</li>
+  <li><strong>GitHub</strong>, to host our Git repository &amp; our site</li>
+</ul>
+
+<p>For this post, we’re assuming:</p>
+
+<ul>
+  <li>You’re comfortable with Jekyll’s static site generator.</li>
+  <li>You’re able to work with both Git and GitHub.</li>
+  <li>You understand the basics of React.</li>
+</ul>
+
+<h2 id="1-create-a-website-on-siteleaf">1. Create a website on Siteleaf</h2>
+
+<p>To handle the content management of our project, we will be using Siteleaf. If you didn’t know it by now, well, it’s a CMS that can be used to manage a Jekyll static website. It makes your life easier if you are developing a website for a client that isn’t tech-savvy. It also enables editing and adding content to the website without the use of tools like Git.</p>
+
+<p>Start by <a href="https://manage.siteleaf.com/signup">creating an account</a> on Siteleaf (they offer a free plan if your site is open source on GitHub).</p>
+
+<p>We’ll need to link this site to a GitHub repository. I suggest you start by creating a new repo. Then, via Siteleaf’s dashboard, go to <strong>Settings</strong>. Click on the <strong>Sync</strong> tab and follow the steps to link your repository.</p>
+
+<p>Siteleaf will automatically create a <code class="highlighter-rouge">_config.yml</code> file. This is the configuration file for a Jekyll site.</p>
+
+<p>Once it’s done, we can start adding some content. Start by creating a new collection called “Products”.</p>
+
+<p><img src="/uploads/jamstack-ecommerce-create-collection.png" alt="Creating a collection in Siteleaf" /></p>
+
+<p>We now need to add some default fields to an item in the Products collection. It’s not something that can be done via Siteleaf, so we’ll need to clone the GitHub repository and edit the <code class="highlighter-rouge">_config.yml</code> file with your favorite text editor.</p>
+
+<p>We’ll start by adding <code class="highlighter-rouge">snipcart_api_key</code> and <code class="highlighter-rouge">url</code> settings at the same level as <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">timezone</code>. This will add two editable fields in Siteleaf’s dashboard: one for the Snipcart public API Key, one to set the root website path. It will be useful when working with <a href="http://docs.snipcart.com/getting-started/security">Snipcart’s validation crawler</a>.</p>
+
+<p><img src="/uploads/jamstack-ecommerce-site-settings.png" alt="Adding Snipcart API key in Siteleaf" /></p>
+
+<p>We’ll also add some fields that are required by Snipcart and that we want to be editable for the client through Siteleaf.</p>
+
+<p>Here is our <code class="highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">Snipcart</span>
+<span class="s">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://snipcart.github.io/snipcart-jamstack'</span>
+<span class="s">snipcart_api_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+<span class="s">timezone</span><span class="pi">:</span> <span class="s">UTC</span>
+<span class="s">collections</span><span class="pi">:</span>
+  <span class="s">posts</span><span class="pi">:</span>
+    <span class="s">title</span><span class="pi">:</span> <span class="s">Posts</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+  <span class="s">products</span><span class="pi">:</span>
+    <span class="s">title</span><span class="pi">:</span> <span class="s">Products</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+  <span class="s">uploads</span><span class="pi">:</span>
+    <span class="s">title</span><span class="pi">:</span> <span class="s">Uploads</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">true</span>
+<span class="s">defaults</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">scope</span><span class="pi">:</span>
+    <span class="s">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="s">type</span><span class="pi">:</span> <span class="s">products</span>
+  <span class="s">values</span><span class="pi">:</span>
+    <span class="s">layout</span><span class="pi">:</span> <span class="s">product</span>
+    <span class="s">permalink</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/products/:title/"</span>
+    <span class="s">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="s">price</span><span class="pi">:</span> <span class="s">0.0</span>
+    <span class="s">sku</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="s">image</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="s">weight</span><span class="pi">:</span> <span class="s">0.0</span>
+<span class="pi">-</span> <span class="s">scope</span><span class="pi">:</span>
+    <span class="s">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="s">type</span><span class="pi">:</span> <span class="s">pages</span>
+  <span class="s">values</span><span class="pi">:</span>
+    <span class="s">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="s">permalink</span><span class="pi">:</span> <span class="s">pretty</span>
+</code></pre>
+</div>
+
+<p>Done? Simply push your <a href="https://github.com/snipcart/snipcart-jamstack/commit/9bacb6bf03daf83ccfbed104e8610c0f8b012b36">changes</a>, and Siteleaf will update automatically.</p>
+
+<p>We can then create a new product by clicking on the <code class="highlighter-rouge">+</code> sign beside Products in Siteleaf. We’ll now have default metadata:</p>
+
+<p><img src="/uploads/jamstack-ecommerce-item-metadata.png" alt="Default metadata in Siteleaf" /></p>
+
+<h2 id="2-add-a-shopping-cart-platform-with-snipcart">2. Add a shopping cart platform with Snipcart</h2>
+
+<p>Okay, it’s time to play with Snipcart a bit! So we now have the mandatory products meta-data. If we check the repo on GitHub, we notice that Siteleaf created a structure similar to the one we made in a <a href="https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll">previous post about a Jekyll + Snipcart integration</a>.</p>
+
+<p>For the next steps, we’ll clone the repository of the blog post above and copy the <code class="highlighter-rouge">_includes</code>, <code class="highlighter-rouge">_layouts</code>, <code class="highlighter-rouge">_sass_</code> and <code class="highlighter-rouge">css</code> folders. Let’s also copy the <code class="highlighter-rouge">index.html</code> file.</p>
+
+<p>We suggest you take a look at <a href="https://github.com/snipcart/snipcart-jamstack/commit/8b8d3da3778f88753fc1af94cc0b5c7079754136">this commit</a> to see which files we added.</p>
+
+<p>Now let’s change the <code class="highlighter-rouge">_includes/snipcart.html</code> file a little. The setting we need to create to store the Snipcart API key is named <code class="highlighter-rouge">snipcart_api_key</code> instead of <code class="highlighter-rouge">api_key</code>. The new file looks like this:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.snipcart.com/scripts/2.0/snipcart.js"</span> <span class="na">data-api-key=</span><span class="s">"{{ site.snipcart_api_key }}"</span> <span class="na">id=</span><span class="s">"snipcart"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>Here, we’ll also modify the <code class="highlighter-rouge">product.html</code>. We’ll specify the product’s absolute URL using the <code class="highlighter-rouge">url</code> field we first created.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"product"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"product"</span> <span class="na">href=</span><span class="s">"{{ product.url }}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ product.image }}"</span> <span class="na">alt=</span><span class="s">"{{ product.name }}"</span> <span class="na">class=</span><span class="s">"thumbnail"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ product.name }}<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"snipcart-add-item"</span>
+    <span class="na">data-item-name=</span><span class="s">"{{ product.name }}"</span>
+    <span class="na">data-item-id=</span><span class="s">"{{ product.sku }}"</span>
+    <span class="na">data-item-image=</span><span class="s">"{{ product.image }}"</span>
+    <span class="na">data-item-url=</span><span class="s">"{{ site.url }}{{product.url }}"</span>
+    <span class="na">data-item-price=</span><span class="s">"{{ product.price }}"</span><span class="nt">&gt;</span>
+    Buy it for {{ product.price }} $
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>Let’s also update the <code class="highlighter-rouge">productdetails</code> file to make the necessary changes.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>---
+layout: default
+head: snipcart.html
+---
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"product-details"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ page.image }}"</span> <span class="na">alt=</span><span class="s">"{{ page.name }}"</span> <span class="na">class=</span><span class="s">"thumbnail"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"product-description"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ page.name }}<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ page.content }}<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"snipcart-add-item"</span>
+      <span class="na">data-item-name=</span><span class="s">"{{ page.name }}"</span>
+      <span class="na">data-item-id=</span><span class="s">"{{ page.sku }}"</span>
+      <span class="na">data-item-image=</span><span class="s">"{{ page.image }}"</span>
+      <span class="na">data-item-url=</span><span class="s">"{{ site.url }}{{ page.url }}"</span>
+      <span class="na">data-item-price=</span><span class="s">"{{ page.price }}"</span><span class="nt">&gt;</span>
+      Buy it for {{ page.price }} $
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>You can take a look at the <a href="https://github.com/snipcart/snipcart-jamstack/commit/0fc32acf24dfd93d4a78f5e0b5475216a58ad88e">commit here</a> for this part.</p>
+
+<h3 id="21-customize-the-shopping-cart">2.1 Customize the shopping cart</h3>
+
+<p>We also want to customize the shopping cart and make it match the website’s design. We wrote a blog post about this when we released the v2.0 of Snipcart. Our frontend lead crafted a simple custom theme that will match the look of our demo site perfectly. We suggest you take a look at the following post for details on simple and advanced cart customization: <a href="https://snipcart.com/blog/customize-snipcart-v2-shopping-cart">How to Customize Snipcart’s v2.0 Shopping Cart</a></p>
+
+<p>For this tutorial, I chose the lazy option and used the file hosted on our demo for the customization example itself. I just replaced the <code class="highlighter-rouge">snipcart.min.css</code> file by the new one in the <code class="highlighter-rouge">snipcart.html</code> file.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.snipcart.com/scripts/2.0/snipcart.js"</span> <span class="na">data-api-key=</span><span class="s">"{{ site.snipcart_api_key }}"</span> <span class="na">id=</span><span class="s">"snipcart"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://snipcart.github.io/snipcart-themes-custom/themes/simple/snipcart.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>And it now looks much better!</p>
+
+<p><img src="/uploads/jamstack-ecommerce-cart.png" alt="Shopping cart overlay" /></p>
+
+<h2 id="3-implement-product-ratings-with-a-react-component">3. Implement product ratings with a React component</h2>
+
+<p>Using Snipcart allows us to interact with its API and persist some data; something we couldn’t do with a static website out of the box.</p>
+
+<p>Here, we want to allow customers to rate a product using a <em>5 stars</em> system, a feature we often see in e-commerce websites.</p>
+
+<p>To do so, we’ll create a small React component to add on each product page.</p>
+
+<p>First thing to do here is to create a new file in the <code class="highlighter-rouge">_includes</code> folder named <code class="highlighter-rouge">rating.html</code>. This file will contain the code for the React component. Please note that the goal of this example is not to explain how React works, but mainly to show how to add a rich e-commerce feature to a static website. So we will not dive into bundling, Webpack and other things developers commonly use with React.</p>
+
+<p>We’ll need to include React and ReactDOM. We can also add the Babel browser plugin to allow us to write the modern JavaScript required by React. So let’s include the three following files:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>We’ll also create an empty <code class="highlighter-rouge">div</code> that will be the container of the main React component.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"product-stars"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>For our use case, we’ll need two components. First one will be the product ratings system itself. This is the component that will fetch the data from Snipcart and persist it.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ProductRater</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="na">getInitialState</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">rating</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">score</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">votes</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">message</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="na">componentDidMount</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Snipcart</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">metadata</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">productId</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">updateScore</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">updateScore</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">meta</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">meta</span> <span class="o">&amp;&amp;</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">score</span> <span class="o">&amp;&amp;</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">votes</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">rating</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">meta</span><span class="p">.</span><span class="nx">score</span> <span class="o">/</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">votes</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">votes</span><span class="p">:</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">votes</span><span class="p">,</span> <span class="na">score</span><span class="p">:</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">score</span><span class="p">,</span> <span class="na">rating</span><span class="p">:</span> <span class="nx">rating</span><span class="p">})</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="na">starClicked</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">component</span><span class="p">,</span> <span class="nx">evnt</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">ratedOn</span> <span class="o">=</span> <span class="nx">store</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'ratedOn:'</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">productId</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">ratedOn</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">toggleMessage</span><span class="p">(</span><span class="s1">'Looks like you already rated this product.'</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">evnt</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">votes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">votes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">score</span> <span class="o">+</span> <span class="nx">component</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">rating</span><span class="p">;</span>
+
+    <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'ratedOn:'</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">productId</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+
+    <span class="nx">Snipcart</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">metadata</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">productId</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">votes</span><span class="p">:</span> <span class="nx">votes</span><span class="p">,</span>
+      <span class="na">score</span><span class="p">:</span> <span class="nx">score</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">updateScore</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span> <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">toggleMessage</span><span class="p">(</span><span class="s1">'Your vote has been recorded!'</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+
+  <span class="na">toggleMessage</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">message</span><span class="p">:</span> <span class="nx">message</span><span class="p">});</span>
+
+    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">message</span><span class="p">:</span> <span class="kc">null</span><span class="p">})</span>
+    <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">stars</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">stars</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Star</span> <span class="nx">parent</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">}</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">starClicked</span><span class="p">}</span> <span class="nx">rating</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">)
+</span>    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">stars</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"flash-message"</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Using the <code class="highlighter-rouge">Snipcart.api.products.metadata</code> method will allow us to retrieve some metadata stored for a product. We will store the number of votes and the score of the products. With this information, we can easily calculate the number of stars a product has.</p>
+
+<p>We’ll need to add a new component, <code class="highlighter-rouge">Star</code>. This one will show a star icon (we used Font Awesome here).</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Star</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">parent</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="s2">"fa "</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">parent</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">rating</span> <span class="o">&gt;=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">rating</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">+=</span> <span class="s2">"fa-star"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">+=</span> <span class="s2">"fa-star-o"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">className</span><span class="p">}</span>
+        <span class="nx">href</span><span class="o">=</span><span class="s2">"#"</span>
+        <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="k">this</span><span class="p">)}</span><span class="o">&gt;&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>      <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Last step is to add the component to the DOM using <code class="highlighter-rouge">ReactDOM</code>.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">ProductRater</span> <span class="nx">productId</span><span class="o">=</span><span class="s2">"{{ page.sku }}"</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.product-stars'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>Note that the code below will be added into a <code class="highlighter-rouge">script</code> tag with <code class="highlighter-rouge">text/babel</code> type in order for the Babel browser plugin to work.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/babel"</span><span class="nt">&gt;</span>
+  <span class="c1">// React code goes here</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>Okay, now we have a <code class="highlighter-rouge">rating.html</code> file that will allow customers to rate products. But we’ll need to include it. In the <code class="highlighter-rouge">productdetails.html</code> file, we’ll add the following lines:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  {% include rating.html %}
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>If we refresh the page, we should be able to rate a product:</p>
+
+<p><img src="/uploads/jamstack-ecommerce-rating.png" alt="Product with star rating" /></p>
+
+<p>You can see the commit to add the React component <a href="https://github.com/snipcart/snipcart-jamstack/commit/8ca45430b27c5701c4311954ea1f17361bb90e6a">here</a>. You can also look at the whole files we created &amp; modified to add this component:</p>
+
+<ul>
+  <li><a href="https://github.com/snipcart/snipcart-jamstack/blob/master/_includes/rating.html"><code class="highlighter-rouge">_includes/rating.html</code></a></li>
+  <li><a href="https://github.com/snipcart/snipcart-jamstack/blob/master/_layouts/productdetails.html"><code class="highlighter-rouge">_layouts/productdetails.html</code></a></li>
+</ul>
+
+<h2 id="4-add-the-appropriate-marketing--customer-service-tools">4. Add the appropriate marketing &amp; customer service tools</h2>
+
+<p>Running an e-commerce site comes with its fair share of marketing challenges and operations. We won’t delve into this whole universe too much here. Still, we thought it important to list a few third party solutions you can easily add to your e-commerce JAMstack site. The following tools might facilitate your clients’ chances of success with their online business:</p>
+
+<ul>
+  <li><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce">Google Analytics E-Commerce Tracking</a>, to analyze audience specifics, track conversions &amp; sales, and measure campaigns ROI.</li>
+  <li><a href="http://mailchimp.com/">Mailchimp</a>, to collect emails and generate more revenues with upselling and targeted campaigns.</li>
+  <li><a href="https://sumome.com/">SumoMe</a>, to grow your website’s traffic with a suite of free tools.</li>
+  <li><a href="https://disqus.com/">Disqus</a>, to improve content interactions with your customers.</li>
+  <li><a href="https://www.intercom.io/">Intercom</a>, to offer real-time support and communicate easily with customers.</li>
+</ul>
+
+<h2 id="5-deploy--host-website">5. Deploy &amp; host website</h2>
+
+<p>Siteleaf offers a variety of hosting options, but the fastest and simplest one is Github Pages.</p>
+
+<p>Start by click on the <strong>Settings</strong> menu in Siteleaf’s dashboard, then open the <strong>Hosting</strong> tab. We’ll keep GitHub Pages as Hosting option and we’ll use the <code class="highlighter-rouge">gh-pages</code> branch.</p>
+
+<p><img src="/uploads/jamstack-ecommerce-hosting.png" alt="Hosting settings in Siteleaf" /></p>
+
+<p>Once it’s done, we can just click on the Publish changes button located in the top right corner of Siteleaf’s dashboard. And we’re live!</p>
+
+<p><img src="/uploads/jamstack-ecommerce-publish.png" alt="Publish changes button in Siteleaf" /></p>
+
+<p>We’ll also need to add <code class="highlighter-rouge">snipcart-jamstack.siteleaf.net</code> in Snipcart’s <a href="http://docs.snipcart.com/merchant-dashboard/store-configurations#5-domains-amp-urls">allowed domains</a> (via the merchant dashboard).</p>
+
+<p class="note">You can see it the live demo for this post right here: <a href="http://snipcart-jamstack.siteleaf.net/">http://snipcart-jamstack.siteleaf.net/</a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Harnessing the power of these developer-first web development tools was a lot of fun. If you follow this tutorial, you’ll have a fast, flexible and merchant-friendly e-commerce JAMstack site running in no time. It took me about an hour to make this setup work (agreed, I used a few pre-written lines for the site). But if you’re a Jekyll master, it could take you even less time!</p>
+
+<p>The <em>real</em> fun part about modern JAMstack sites is you can pick the exact tools you need and bundle them together with Git. No more features bloat and software overkill: adopt a modular approach and you can call precise shots now!</p>
+
+<p>I sincerely hope this article inspires other developers to get their hands dirty with JAMstack projects! :)</p>
+
+<hr />
+
+<p><em>Charles Ouellet has been writing code and building apps for 10+ years. He’s the co-founder and lead engineer of <a href="https://snipcart.com/">Snipcart</a>, a developer-first shopping cart platform. Good scotch and cool socks make him very happy. <a href="https://twitter.com/couellet">Follow him on Twitter</a>.</em></p>
+
+    
+    
+  </section>
+</article>
+
+
+  <div class="post__buttonWrap">
+    <a href="/myBlog/blog/tags/tutorial" class="bg--blue post__button">See more tutorials</a>
+  </div>
+
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>

@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Siteleaf</title>
+    <description>Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more.</description>
+    <link>http://localhost:4000/myBlog/</link>
+    <atom:link href="http://localhost:4000/myBlog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 25 Jan 2017 14:05:02 -0500</pubDate>
+    <lastBuildDate>Wed, 25 Jan 2017 14:05:02 -0500</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Add SSL to your site for free</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/myBlog/uploads/https.svg&quot; alt=&quot;Add SSL to your site free&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Is your website encrypted?&lt;/p&gt;
+
+&lt;p&gt;Back in 2014, Google announced it would begin using &lt;a href=&quot;https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html&quot;&gt;HTTPS encryption as search ranking signal&lt;/a&gt;. If you are still serving your site over basic HTTP in 2017, you may be missing a key part in your SEO strategy.&lt;/p&gt;
+
+&lt;p&gt;The good news? It’s never been easier to jump aboard the HTTPS train and secure your traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_Secure&quot;&gt;HTTPS&lt;/a&gt; (also known as HTTP over &lt;a href=&quot;https://en.wikipedia.org/wiki/Transport_Layer_Security&quot;&gt;TLS&lt;/a&gt;, or Transport Layer Security) uses SSL/TLS certificates to identify your website and encrypt data in transit to your website’s visitors.&lt;/p&gt;
+
+&lt;p&gt;Google will be pushing further with the release of Chrome 56 later this month, &lt;a href=&quot;https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html&quot;&gt;announcing&lt;/a&gt; it will mark all non-HTTPS pages containing password and credit card input fields as “Not Secure”. Eventually, Chrome plans to show a &lt;a href=&quot;https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn&quot;&gt;Not Secure warning for all pages served over HTTP&lt;/a&gt;, regardless of whether or not the page contains sensitive input fields. Here’s what visitors will see in the new version:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/myBlog/uploads/chrome-https.png&quot; alt=&quot;Treatment of HTTP pages with password or credit card form fields in Chrome 56&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are several ways obtain an SSL certificate for your site — many of them are completely free, and only take a few minutes to set up. Since Siteleaf supports publishing to any web host, you can choose the option that best fits your needs.&lt;/p&gt;
+
+&lt;p&gt;We’ll review our favorites in this blog post, starting with CloudFront (which we use ourselves for this blog).&lt;/p&gt;
+
+&lt;h2 id=&quot;1-cloudfront&quot;&gt;1. CloudFront&lt;/h2&gt;
+
+&lt;p&gt;Amazon Web Services offers free SSL certificates using their &lt;a href=&quot;https://aws.amazon.com/certificate-manager/&quot;&gt;Certificate Manager&lt;/a&gt; tool which you can pair with &lt;a href=&quot;https://aws.amazon.com/cloudfront/&quot;&gt;CloudFront&lt;/a&gt; to handle the delivery and encryption.&lt;/p&gt;
+
+&lt;p&gt;AWS is an obvious choice if you are already using S3 for hosting, but it can also work nicely with GitHub Pages or any other external host. Along with HTTPS, you’ll be getting a global content delivery network (CDN) to accelerate your traffic.&lt;/p&gt;
+
+&lt;p&gt;While the certificates are free, CloudFront does add a small cost, but its very affordable at &lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/&quot;&gt;a few pennies per GB&lt;/a&gt; of bandwidth. Pro users will appreciate the powerful settings to control (or disable) cache, and the ability to &lt;a href=&quot;http://www.cloudberrylab.com/blog/how-to-automatically-invalidate-dynamic-objects-in-amazon-cloudfront-using-aws-lambda/&quot;&gt;automatically invalidate cached files from S3&lt;/a&gt; using Lambda functions.&lt;/p&gt;
+
+&lt;p&gt;Here are some tutorials to get set up with HTTPS and AWS:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://strd6.com/2016/02/github-pages-custom-domain-with-ssltls/&quot;&gt;CloudFront with GitHub Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.webinista.com/2016/02/enable-https-cloudfront-certificate-manager-s3/index.html&quot;&gt;CloudFront with Amazon S3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5uS_rQjQ4Hw&quot;&gt;CloudFront with Amazon S3 (Video)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-cloudflare&quot;&gt;2. Cloudflare&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cloudflare.com&quot;&gt;Cloudflare&lt;/a&gt; is another strong option giving you free SSL, a global CDN, as well as advanced security features like DDoS protection. It’s &lt;a href=&quot;https://www.cloudflare.com/ssl/&quot;&gt;completely free for personal sites&lt;/a&gt;, and works with GitHub Pages, Amazon S3, and any other external host.&lt;/p&gt;
+
+&lt;p&gt;If you are looking for a simple, straight forward setup, Cloudflare may be the choice for you.&lt;/p&gt;
+
+&lt;p&gt;Here are some tutorials to get set up with HTTPS and Cloudflare:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&quot;&gt;Cloudflare with GitHub Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.cloudflare.com/hc/en-us/articles/200168926-How-do-I-use-CloudFlare-with-Amazon-s-S3-Service-&quot;&gt;Cloudflare with Amazon S3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-lets-encrypt&quot;&gt;3. Let’s Encrypt&lt;/h2&gt;
+
+&lt;p&gt;If you publish to your own FTP or SFTP server, you can install a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org&quot;&gt;Let’s Encrypt&lt;/a&gt;, an automated and open certificate authority. Like CloudFront and Cloudflare, these certificates can be set up to automatically renew, so you’ll never have to worry about expiration dates.&lt;/p&gt;
+
+&lt;p&gt;Here are some tutorials to get set up with HTTPS and Let’s Encrypt on a few popular web hosts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dreamhost.com/hosting/ssl-tls-certificates/&quot;&gt;Let’s Encrypt with DreamHost&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mediatemple.net/community/products/dv/208603976/install-a-let's-encrypt-ssl&quot;&gt;Let’s Encrypt with Media Temple&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tags/let-s-encrypt?type=tutorials&quot;&gt;Let’s Encrypt with DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instructions may vary by host, so check your provider’s help docs for specific details on how to install an SSL certificate.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here’s to a happy and secure 2017!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Jan 2017 10:00:00 -0500</pubDate>
+        <link>http://localhost:4000/myBlog/blog/add-ssl-to-your-site-free/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/add-ssl-to-your-site-free/</guid>
+        
+        <category>tip</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>More whitelisted plugins</title>
+        <description>&lt;p&gt;Hot on the heels of the &lt;a href=&quot;/blog/jekyll-update-and-new-whitelisted-plugins/&quot;&gt;Jekyll 3.3.1 update earlier this week&lt;/a&gt;, four additional plugins have been &lt;a href=&quot;https://github.com/blog/2289-publishing-with-github-pages-now-as-easy-as-1-2-3&quot;&gt;whitelisted for GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These plugins are specifically geared toward software documentation and open source code projects on GitHub, but may come in handy for any type of website.&lt;/p&gt;
+
+&lt;p&gt;Here they are:&lt;/p&gt;
+
+&lt;h4 id=&quot;1-jekyll-default-layout&quot;&gt;1. jekyll-default-layout&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-default-layout&quot;&gt;Jekyll Default Layout&lt;/a&gt; will automatically set default layouts for your Jekyll pages and documents. If no layout is specified, the plugin looks for layouts called &lt;code class=&quot;highlighter-rouge&quot;&gt;home&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;post&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; and automatically sets it for your homepage, posts, pages, and documents respectively.&lt;/p&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-default-layout&quot;&gt;https://github.com/benbalter/jekyll-default-layout&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-jekyll-titles-from-headings&quot;&gt;2. jekyll-titles-from-headings&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-titles-from-headings&quot;&gt;Jekyll Title from Headings&lt;/a&gt; is a plugin that automatically grabs the page title from the first &lt;code class=&quot;highlighter-rouge&quot;&gt;H1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;H2&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;H3&lt;/code&gt; in your Markdown documents.&lt;/p&gt;
+
+&lt;p&gt;This page title can then be used by Jekyll and other plugins including &lt;a href=&quot;https://github.com/benbalter/jekyll-seo-tag&quot;&gt;Jekyll SEO Tag&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-titles-from-headings&quot;&gt;https://github.com/benbalter/jekyll-titles-from-headings&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-jekyll-optional-front-matter&quot;&gt;3. jekyll-optional-front-matter&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-optional-front-matter&quot;&gt;Jekyll Optional Front Matter&lt;/a&gt; is a plugin which makes YAML front matter optional for Markdown files.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind the Siteleaf UI will only surface Markdown pages and documents with YAML front matter, so this could be a way to have hidden (non-editable) pages that publish along with your site.&lt;/p&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-optional-front-matter&quot;&gt;https://github.com/benbalter/jekyll-optional-front-matter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-jekyll-readme-index&quot;&gt;4. jekyll-readme-index&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-readme-index&quot;&gt;Jekyll Readme Index&lt;/a&gt; is a handy plugin specifically useful for GitHub-centric projects. If you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; file in your repo, and your site doesn’t otherwise have an index file, this plugin instructs Jekyll to use the readme as the site’s index.&lt;/p&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-readme-index&quot;&gt;https://github.com/benbalter/jekyll-readme-index&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;These plugins are enabled by default when your site is compiled by GitHub, or if no &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; is specified. To disable default plugins, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; and specify only the desired plugins.&lt;/p&gt;
+
+&lt;p&gt;In addition to whitelisted plugins, sites on our Team and higher plans can use third-party plugins.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;learn.siteleaf.com&lt;/a&gt; for a full list of whitelisted plugins, and how to use a &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 09 Dec 2016 16:42:00 -0500</pubDate>
+        <link>http://localhost:4000/myBlog/blog/more-whitelisted-plugins/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/more-whitelisted-plugins/</guid>
+        
+        <category>announcement</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll update &amp; new whitelisted plugins</title>
+        <description>&lt;p&gt;We have updated our default Jekyll version from 3.3.0 to 3.3.1, to match the &lt;a href=&quot;https://github.com/blog/2290-relative-links-for-github-pages&quot;&gt;recent update at GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This update includes a few minor enhancements and bug fixes. For a full list of revisions &lt;a href=&quot;https://jekyllrb.com/docs/history/#v3-3-1&quot;&gt;check out the release notes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also included in this update are two new &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;whitelisted plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-jekyll-avatar&quot;&gt;1. jekyll-avatar&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-avatar&quot;&gt;Jekyll Avatar&lt;/a&gt; makes it easy to add GitHub avatars to your site by specifying a username. Avatars are cached by GitHub, load in parallel, and use retina images when supported.&lt;/p&gt;
+
+&lt;p&gt;Simply add the following, anywhere you’d like a user’s avatar to appear:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;USERNAME&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also customize the size:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;siteleaf&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;size=50&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This would render as:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;avatar&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://avatars3.githubusercontent.com/siteleaf?v=3&amp;amp;amp;s=50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;siteleaf&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srcset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://avatars3.githubusercontent.com/siteleaf?v=3&amp;amp;amp;s=50 1x, https://avatars3.githubusercontent.com/siteleaf?v=3&amp;amp;amp;s=100 2x, https://avatars3.githubusercontent.com/siteleaf?v=3&amp;amp;amp;s=150 3x, https://avatars3.githubusercontent.com/siteleaf?v=3&amp;amp;amp;s=200 4x&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-avatar&quot;&gt;https://github.com/benbalter/jekyll-avatar&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-jekyll-relative-links&quot;&gt;2. jekyll-relative-links&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/benbalter/jekyll-relative-links&quot;&gt;Jekyll Relative Links&lt;/a&gt; convert relative markdown links to their rendered equivalents.&lt;/p&gt;
+
+&lt;p&gt;For example, if you link to a Markdown file called &lt;code class=&quot;highlighter-rouge&quot;&gt;bar.md&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[foo](bar.md)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This plugin converts your link to the rendered permalink version:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/bar.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;foo&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For details see: &lt;a href=&quot;https://github.com/benbalter/jekyll-relative-links&quot;&gt;https://github.com/benbalter/jekyll-relative-links&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For most sites, no action is required to take advantage of the latest version. If you wish to use a specific version of Jekyll for your site, you can define that in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As a reminder, sites on our Team and higher plans can also use custom (non-whitelisted) gems. See &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;learn.siteleaf.com&lt;/a&gt; for all the details.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Dec 2016 14:25:00 -0500</pubDate>
+        <link>http://localhost:4000/myBlog/blog/jekyll-update-and-new-whitelisted-plugins/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/jekyll-update-and-new-whitelisted-plugins/</guid>
+        
+        <category>announcement</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>JAMstack e-commerce with Siteleaf &amp; Snipcart</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is a guest post by Charles Ouellet, co-founder of &lt;a href=&quot;https://snipcart.com/&quot;&gt;Snipcart&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’re reading this blog, you know static web development is trendy, to say the least. Unless you just got out of a years-long meditation retreat in a cave with no Internet. If that’s your case, well, hum, welcome back!&lt;/p&gt;
+
+&lt;p&gt;At Snipcart, our developer-first shopping cart platform, we’ve been diving into static site generators and related tools for 2+ years now. And we believe &lt;a href=&quot;https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/&quot;&gt;they are the next big thing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A short while ago, a friend of ours gave an &lt;a href=&quot;https://vimeo.com/163522126&quot;&gt;in-depth conference on why “static” is a bad word&lt;/a&gt; for the modern front-end stack, aka the &lt;strong&gt;JAMstack&lt;/strong&gt; (JavaScript, APIs, &amp;amp; Markup).&lt;/p&gt;
+
+&lt;p&gt;And he’s right:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-static-definition.png&quot; alt=&quot;Static definition&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s nothing “undesirable” or “uninteresting” about the modern static websites &amp;amp; apps developers are pushing online. It’s in fact quite the opposite.&lt;/p&gt;
+
+&lt;p&gt;As a community, we need to give this new paradigm a name worthy of its actual value, and that’s exactly what the &lt;strong&gt;&lt;a href=&quot;http://jamstack.org/&quot;&gt;JAMstack&lt;/a&gt;&lt;/strong&gt; is.&lt;/p&gt;
+
+&lt;p&gt;But this post isn’t a philosophical essay on the benefits of the API economy and the modular development approach. It’s about putting together a killer e-commerce workflow that ticks all of the boxes on the JAMstack checklist:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Entire site on a CDN&lt;/li&gt;
+  &lt;li&gt;Atomic deploys&lt;/li&gt;
+  &lt;li&gt;Instant cache invalidation&lt;/li&gt;
+  &lt;li&gt;Everything lives in Git&lt;/li&gt;
+  &lt;li&gt;Automated builds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So today, I’m going to show you how to build an &lt;strong&gt;API-centric, fast and secure e-commerce project&lt;/strong&gt; in 5 simple steps. And I’m going to use the right JAMstack tools to do so.&lt;/p&gt;
+
+&lt;p&gt;Let’s do it!&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-notes&quot;&gt;Starting notes&lt;/h2&gt;
+
+&lt;p&gt;We’re going to use the following tools for our e-commerce JAMstack:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Siteleaf&lt;/strong&gt;, to manage our content&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, to generate our static site&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Snipcart&lt;/strong&gt;, to handle e-commerce&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;React&lt;/strong&gt;, to code a rich shopping feature&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;, to host our Git repository &amp;amp; our site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For this post, we’re assuming:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You’re comfortable with Jekyll’s static site generator.&lt;/li&gt;
+  &lt;li&gt;You’re able to work with both Git and GitHub.&lt;/li&gt;
+  &lt;li&gt;You understand the basics of React.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-create-a-website-on-siteleaf&quot;&gt;1. Create a website on Siteleaf&lt;/h2&gt;
+
+&lt;p&gt;To handle the content management of our project, we will be using Siteleaf. If you didn’t know it by now, well, it’s a CMS that can be used to manage a Jekyll static website. It makes your life easier if you are developing a website for a client that isn’t tech-savvy. It also enables editing and adding content to the website without the use of tools like Git.&lt;/p&gt;
+
+&lt;p&gt;Start by &lt;a href=&quot;https://manage.siteleaf.com/signup&quot;&gt;creating an account&lt;/a&gt; on Siteleaf (they offer a free plan if your site is open source on GitHub).&lt;/p&gt;
+
+&lt;p&gt;We’ll need to link this site to a GitHub repository. I suggest you start by creating a new repo. Then, via Siteleaf’s dashboard, go to &lt;strong&gt;Settings&lt;/strong&gt;. Click on the &lt;strong&gt;Sync&lt;/strong&gt; tab and follow the steps to link your repository.&lt;/p&gt;
+
+&lt;p&gt;Siteleaf will automatically create a &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file. This is the configuration file for a Jekyll site.&lt;/p&gt;
+
+&lt;p&gt;Once it’s done, we can start adding some content. Start by creating a new collection called “Products”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-create-collection.png&quot; alt=&quot;Creating a collection in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We now need to add some default fields to an item in the Products collection. It’s not something that can be done via Siteleaf, so we’ll need to clone the GitHub repository and edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file with your favorite text editor.&lt;/p&gt;
+
+&lt;p&gt;We’ll start by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;snipcart_api_key&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; settings at the same level as &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;timezone&lt;/code&gt;. This will add two editable fields in Siteleaf’s dashboard: one for the Snipcart public API Key, one to set the root website path. It will be useful when working with &lt;a href=&quot;http://docs.snipcart.com/getting-started/security&quot;&gt;Snipcart’s validation crawler&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-site-settings.png&quot; alt=&quot;Adding Snipcart API key in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll also add some fields that are required by Snipcart and that we want to be editable for the client through Siteleaf.&lt;/p&gt;
+
+&lt;p&gt;Here is our &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Snipcart&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://snipcart.github.io/snipcart-jamstack'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;snipcart_api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;timezone&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;UTC&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Posts&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;products&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Products&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;uploads&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Uploads&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;products&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;product&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/products/:title/&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;0.0&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;sku&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;0.0&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pages&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;page&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pretty&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Done? Simply push your &lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/commit/9bacb6bf03daf83ccfbed104e8610c0f8b012b36&quot;&gt;changes&lt;/a&gt;, and Siteleaf will update automatically.&lt;/p&gt;
+
+&lt;p&gt;We can then create a new product by clicking on the &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; sign beside Products in Siteleaf. We’ll now have default metadata:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-item-metadata.png&quot; alt=&quot;Default metadata in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-add-a-shopping-cart-platform-with-snipcart&quot;&gt;2. Add a shopping cart platform with Snipcart&lt;/h2&gt;
+
+&lt;p&gt;Okay, it’s time to play with Snipcart a bit! So we now have the mandatory products meta-data. If we check the repo on GitHub, we notice that Siteleaf created a structure similar to the one we made in a &lt;a href=&quot;https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll&quot;&gt;previous post about a Jekyll + Snipcart integration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the next steps, we’ll clone the repository of the blog post above and copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_sass_&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; folders. Let’s also copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;We suggest you take a look at &lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/commit/8b8d3da3778f88753fc1af94cc0b5c7079754136&quot;&gt;this commit&lt;/a&gt; to see which files we added.&lt;/p&gt;
+
+&lt;p&gt;Now let’s change the &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/snipcart.html&lt;/code&gt; file a little. The setting we need to create to store the Snipcart API key is named &lt;code class=&quot;highlighter-rouge&quot;&gt;snipcart_api_key&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;api_key&lt;/code&gt;. The new file looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.snipcart.com/scripts/2.0/snipcart.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-api-key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.snipcart_api_key }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;snipcart&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, we’ll also modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;product.html&lt;/code&gt;. We’ll specify the product’s absolute URL using the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; field we first created.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;product&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;product&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.url }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.image }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.name }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thumbnail&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;{{ product.name }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;snipcart-add-item&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;data-item-name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.name }}&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;data-item-id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.sku }}&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;data-item-image=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.image }}&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;data-item-url=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{product.url }}&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;data-item-price=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ product.price }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    Buy it for {{ product.price }} $
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s also update the &lt;code class=&quot;highlighter-rouge&quot;&gt;productdetails&lt;/code&gt; file to make the necessary changes.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+head: snipcart.html
+---
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;product-details&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.image }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.name }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thumbnail&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;product-description&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;{{ page.name }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;{{ page.content }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;snipcart-add-item&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;data-item-name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.name }}&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;data-item-id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.sku }}&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;data-item-image=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.image }}&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;data-item-url=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.url }}&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;data-item-price=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.price }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      Buy it for {{ page.price }} $
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can take a look at the &lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/commit/0fc32acf24dfd93d4a78f5e0b5475216a58ad88e&quot;&gt;commit here&lt;/a&gt; for this part.&lt;/p&gt;
+
+&lt;h3 id=&quot;21-customize-the-shopping-cart&quot;&gt;2.1 Customize the shopping cart&lt;/h3&gt;
+
+&lt;p&gt;We also want to customize the shopping cart and make it match the website’s design. We wrote a blog post about this when we released the v2.0 of Snipcart. Our frontend lead crafted a simple custom theme that will match the look of our demo site perfectly. We suggest you take a look at the following post for details on simple and advanced cart customization: &lt;a href=&quot;https://snipcart.com/blog/customize-snipcart-v2-shopping-cart&quot;&gt;How to Customize Snipcart’s v2.0 Shopping Cart&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For this tutorial, I chose the lazy option and used the file hosted on our demo for the customization example itself. I just replaced the &lt;code class=&quot;highlighter-rouge&quot;&gt;snipcart.min.css&lt;/code&gt; file by the new one in the &lt;code class=&quot;highlighter-rouge&quot;&gt;snipcart.html&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.snipcart.com/scripts/2.0/snipcart.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-api-key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.snipcart_api_key }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;snipcart&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://snipcart.github.io/snipcart-themes-custom/themes/simple/snipcart.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And it now looks much better!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-cart.png&quot; alt=&quot;Shopping cart overlay&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-implement-product-ratings-with-a-react-component&quot;&gt;3. Implement product ratings with a React component&lt;/h2&gt;
+
+&lt;p&gt;Using Snipcart allows us to interact with its API and persist some data; something we couldn’t do with a static website out of the box.&lt;/p&gt;
+
+&lt;p&gt;Here, we want to allow customers to rate a product using a &lt;em&gt;5 stars&lt;/em&gt; system, a feature we often see in e-commerce websites.&lt;/p&gt;
+
+&lt;p&gt;To do so, we’ll create a small React component to add on each product page.&lt;/p&gt;
+
+&lt;p&gt;First thing to do here is to create a new file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder named &lt;code class=&quot;highlighter-rouge&quot;&gt;rating.html&lt;/code&gt;. This file will contain the code for the React component. Please note that the goal of this example is not to explain how React works, but mainly to show how to add a rich e-commerce feature to a static website. So we will not dive into bundling, Webpack and other things developers commonly use with React.&lt;/p&gt;
+
+&lt;p&gt;We’ll need to include React and ReactDOM. We can also add the Babel browser plugin to allow us to write the modern JavaScript required by React. So let’s include the three following files:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ll also create an empty &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; that will be the container of the main React component.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;product-stars&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For our use case, we’ll need two components. First one will be the product ratings system itself. This is the component that will fetch the data from Snipcart and persist it.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ProductRater&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;getInitialState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Snipcart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;products&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;updateScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;updateScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;starClicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;evnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ratedOn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ratedOn:'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ratedOn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Looks like you already rated this product.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;evnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ratedOn:'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;Snipcart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;products&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;updateScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Your vote has been recorded!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;toggleMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;stars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Star&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;starClicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;flash-message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/span&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;Snipcart.api.products.metadata&lt;/code&gt; method will allow us to retrieve some metadata stored for a product. We will store the number of votes and the score of the products. With this information, we can easily calculate the number of stars a product has.&lt;/p&gt;
+
+&lt;p&gt;We’ll need to add a new component, &lt;code class=&quot;highlighter-rouge&quot;&gt;Star&lt;/code&gt;. This one will show a star icon (we used Font Awesome here).&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Star&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fa &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fa-star&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fa-star-o&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Last step is to add the component to the DOM using &lt;code class=&quot;highlighter-rouge&quot;&gt;ReactDOM&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ProductRater&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;productId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ page.sku }}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.product-stars'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that the code below will be added into a &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; tag with &lt;code class=&quot;highlighter-rouge&quot;&gt;text/babel&lt;/code&gt; type in order for the Babel browser plugin to work.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/babel&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// React code goes here&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Okay, now we have a &lt;code class=&quot;highlighter-rouge&quot;&gt;rating.html&lt;/code&gt; file that will allow customers to rate products. But we’ll need to include it. In the &lt;code class=&quot;highlighter-rouge&quot;&gt;productdetails.html&lt;/code&gt; file, we’ll add the following lines:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+  {% include rating.html %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If we refresh the page, we should be able to rate a product:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-rating.png&quot; alt=&quot;Product with star rating&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see the commit to add the React component &lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/commit/8ca45430b27c5701c4311954ea1f17361bb90e6a&quot;&gt;here&lt;/a&gt;. You can also look at the whole files we created &amp;amp; modified to add this component:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/blob/master/_includes/rating.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/rating.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/snipcart/snipcart-jamstack/blob/master/_layouts/productdetails.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts/productdetails.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-add-the-appropriate-marketing--customer-service-tools&quot;&gt;4. Add the appropriate marketing &amp;amp; customer service tools&lt;/h2&gt;
+
+&lt;p&gt;Running an e-commerce site comes with its fair share of marketing challenges and operations. We won’t delve into this whole universe too much here. Still, we thought it important to list a few third party solutions you can easily add to your e-commerce JAMstack site. The following tools might facilitate your clients’ chances of success with their online business:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce&quot;&gt;Google Analytics E-Commerce Tracking&lt;/a&gt;, to analyze audience specifics, track conversions &amp;amp; sales, and measure campaigns ROI.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mailchimp.com/&quot;&gt;Mailchimp&lt;/a&gt;, to collect emails and generate more revenues with upselling and targeted campaigns.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sumome.com/&quot;&gt;SumoMe&lt;/a&gt;, to grow your website’s traffic with a suite of free tools.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;, to improve content interactions with your customers.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.intercom.io/&quot;&gt;Intercom&lt;/a&gt;, to offer real-time support and communicate easily with customers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-deploy--host-website&quot;&gt;5. Deploy &amp;amp; host website&lt;/h2&gt;
+
+&lt;p&gt;Siteleaf offers a variety of hosting options, but the fastest and simplest one is Github Pages.&lt;/p&gt;
+
+&lt;p&gt;Start by click on the &lt;strong&gt;Settings&lt;/strong&gt; menu in Siteleaf’s dashboard, then open the &lt;strong&gt;Hosting&lt;/strong&gt; tab. We’ll keep GitHub Pages as Hosting option and we’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-hosting.png&quot; alt=&quot;Hosting settings in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once it’s done, we can just click on the Publish changes button located in the top right corner of Siteleaf’s dashboard. And we’re live!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jamstack-ecommerce-publish.png&quot; alt=&quot;Publish changes button in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll also need to add &lt;code class=&quot;highlighter-rouge&quot;&gt;snipcart-jamstack.siteleaf.net&lt;/code&gt; in Snipcart’s &lt;a href=&quot;http://docs.snipcart.com/merchant-dashboard/store-configurations#5-domains-amp-urls&quot;&gt;allowed domains&lt;/a&gt; (via the merchant dashboard).&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;You can see it the live demo for this post right here: &lt;a href=&quot;http://snipcart-jamstack.siteleaf.net/&quot;&gt;http://snipcart-jamstack.siteleaf.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Harnessing the power of these developer-first web development tools was a lot of fun. If you follow this tutorial, you’ll have a fast, flexible and merchant-friendly e-commerce JAMstack site running in no time. It took me about an hour to make this setup work (agreed, I used a few pre-written lines for the site). But if you’re a Jekyll master, it could take you even less time!&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; fun part about modern JAMstack sites is you can pick the exact tools you need and bundle them together with Git. No more features bloat and software overkill: adopt a modular approach and you can call precise shots now!&lt;/p&gt;
+
+&lt;p&gt;I sincerely hope this article inspires other developers to get their hands dirty with JAMstack projects! :)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Charles Ouellet has been writing code and building apps for 10+ years. He’s the co-founder and lead engineer of &lt;a href=&quot;https://snipcart.com/&quot;&gt;Snipcart&lt;/a&gt;, a developer-first shopping cart platform. Good scotch and cool socks make him very happy. &lt;a href=&quot;https://twitter.com/couellet&quot;&gt;Follow him on Twitter&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Oct 2016 10:00:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/jamstack-ecommerce/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/jamstack-ecommerce/</guid>
+        
+        <category>tutorial</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Creating tag pages with Jekyll and Siteleaf</title>
+        <description>&lt;p&gt;In this tutorial, we show you approaches for creating tag pages in Jekyll and Siteleaf.&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;This is part two of a tutorial series on Jekyll and Siteleaf. Check out part one on &lt;a href=&quot;/blog/author-pages-in-jekyll-and-siteleaf/&quot;&gt;author pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-plugin-approach&quot;&gt;The plugin approach&lt;/h2&gt;
+
+&lt;p&gt;If you plan to use more than a dozen or so tags, a &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugin&lt;/a&gt; can save you from having to create individual documents for each. This approach lets authors and content managers easily create new tags on the fly, while having autocomplete available in the Siteleaf UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/tags-select.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For this tutorial, we demonstrate how to set up tag pages on your Jekyll blog using the &lt;a href=&quot;https://github.com/pattex/jekyll-tagging&quot;&gt;jekyll-tagging&lt;/a&gt; plugin, which we at Oak used when building the &lt;a href=&quot;http://www.collaborativefund.com/blog/&quot;&gt;Collaborative Fund blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;note&quot;&gt;Third-party and custom plugins are available starting on the Team plan.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-the-plugin&quot;&gt;Install the plugin&lt;/h3&gt;
+
+&lt;p&gt;In your &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;, include &lt;code class=&quot;highlighter-rouge&quot;&gt;'jekyll-tagging'&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
+gem 'jekyll'
+group :jekyll_plugins do
+  gem 'jekyll-tagging'
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, include &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll/tagging&lt;/code&gt; in the list of gems:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gems:
+- jekyll/tagging
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;note&quot;&gt;Due to the directory layout for this plugin, we include it as &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll/tagging&lt;/code&gt; rather than the standard &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-tagging&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more, read our full documentation on using &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-up-your-templates&quot;&gt;Set up your templates&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/pattex/jekyll-tagging&quot;&gt;jekyll-tagging&lt;/a&gt; plugin automatically generates pages for each unique tag across all your posts. You can specify the layout template these tag pages use and the directory into which they’re generated in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tag_page_layout: tag
+tag_page_dir: blog/tags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;All you need to do, then, is set up your templates to expose these tag pages.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;http://www.collaborativefund.com/blog/the-villain-test/&quot;&gt;post&lt;/a&gt; template, you can list the post’s tags and link to their corresponding pages by constructing the URL based off the &lt;code class=&quot;highlighter-rouge&quot;&gt;tag_page_dir&lt;/code&gt; you’ve configured.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;tag&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;page.tags&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&quot;/&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag_page_dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;/&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slugify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'pretty'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;/&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then in the &lt;a href=&quot;http://www.collaborativefund.com/blog/tags/investment-thesis/&quot;&gt;tag page&lt;/a&gt; template, you can list all the posts with that tag by looping through Jekyll’s built-in variable &lt;code class=&quot;highlighter-rouge&quot;&gt;site.tags&lt;/code&gt;, filtered by that tag.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1&amp;gt;Tagged &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/h1&amp;gt;
+
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;posts&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finally, you can list all the tags for your site in an &lt;a href=&quot;http://www.collaborativefund.com/blog/tags/&quot;&gt;index page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;tag&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.tags&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag_page_dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;/&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slugify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'pretty'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;/&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;tip&quot;&gt;You can even &lt;a href=&quot;https://gist.github.com/sskylar/8956549d1ae9dc91c89e74b1c5a0d8c9&quot;&gt;sort your tags&lt;/a&gt; by popularity (number of posts).&lt;/p&gt;
+
+&lt;h2 id=&quot;the-collection-approach&quot;&gt;The collection approach&lt;/h2&gt;
+
+&lt;p&gt;A simple, plugin-less way to add tag pages to your Jekyll blog is to create a tags &lt;a href=&quot;https://jekyllrb.com/docs/collections/&quot;&gt;collection&lt;/a&gt;, in the same way we did for authors in the &lt;a href=&quot;/blog/author-pages-in-jekyll-and-siteleaf/&quot;&gt;previous tutorial&lt;/a&gt;. Jekyll can then generate a page for each tag document in your collection.&lt;/p&gt;
+
+&lt;p&gt;The Siteleaf blog &lt;a href=&quot;https://github.com/siteleaf/siteleaf.com/tree/master/_blog_tags&quot;&gt;uses&lt;/a&gt; this approach, for example. This even gives us the flexibility to &lt;a href=&quot;/blog/tags/tutorial/&quot;&gt;add&lt;/a&gt; &lt;a href=&quot;/blog/tags/jekyll/&quot;&gt;fun&lt;/a&gt; &lt;a href=&quot;/blog/tags/announcement/&quot;&gt;colors&lt;/a&gt; to each tag page by setting up a &lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; metadata field for each tag document.&lt;/p&gt;
+
+&lt;p class=&quot;tip&quot;&gt;Since this approach doesn’t require a plugin, your site can be readily published to GitHub Pages on Siteleaf’s free Developer plan.&lt;/p&gt;
+
+&lt;p&gt;For more on this collection approach, read the tutorial on &lt;a href=&quot;/blog/author-pages-in-jekyll-and-siteleaf/&quot;&gt;author pages&lt;/a&gt; or explore the Siteleaf blog &lt;a href=&quot;https://github.com/siteleaf/siteleaf.com/tree/master/_blog_tags&quot;&gt;source code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;/h2&gt;
+
+&lt;p&gt;Way to go! You now know two ways to add tag pages to your Jekyll blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The first approach utilizes a plugin to automatically generate pages for each of your tags. Content managers can then easily add new tags or existing tags in the Siteleaf UI.&lt;/li&gt;
+  &lt;li&gt;The second approach uses collections to output a page for each tag document.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Jekyll: Plugins&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;Siteleaf: Plugins&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/collections/&quot;&gt;Jekyll: Collections&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 21 Oct 2016 12:13:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/</guid>
+        
+        <category>tutorial</category>
+        
+        <category>jekyll</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Creating author pages with Jekyll and Siteleaf</title>
+        <description>&lt;p&gt;At Oak, we recently launched a new website for our friends at &lt;a href=&quot;http://www.collaborativefund.com/&quot;&gt;Collaborative Fund&lt;/a&gt;, built on Siteleaf. The site features a &lt;a href=&quot;http://www.collaborativefund.com/blog/&quot;&gt;blog&lt;/a&gt; for their prolific content, including &lt;a href=&quot;http://www.collaborativefund.com/blog/authors/morgan/&quot;&gt;author&lt;/a&gt; and &lt;a href=&quot;http://www.collaborativefund.com/blog/tags/featured/&quot;&gt;tag&lt;/a&gt; pages.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, we show you how to set up your Jekyll blog with author pages and leverage Siteleaf to maintain your content.&lt;/p&gt;
+
+&lt;p class=&quot;tip&quot;&gt;The approach we use in this tutorial can be easily adapted to other sets of content as well, not just authors. It also is plugin-less, which means it can be readily published to GitHub Pages on Siteleaf’s free Developer plan.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-your-collection&quot;&gt;Create your collection&lt;/h2&gt;
+
+&lt;p&gt;Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/collections/&quot;&gt;collections&lt;/a&gt; are a powerful way to organize and manage content on your site. Collections allow you to define documents with their own properties and output a page for each, making them flexible enough to create rich author pages.&lt;/p&gt;
+
+&lt;p&gt;You can create collections in Siteleaf or manually in your source files.&lt;/p&gt;
+
+&lt;h3 id=&quot;in-siteleaf&quot;&gt;In Siteleaf&lt;/h3&gt;
+
+&lt;p&gt;To create your collection in Siteleaf, click &lt;strong&gt;New collection&lt;/strong&gt; in the sidebar of the Siteleaf UI and give it the title “Authors”. Then click &lt;strong&gt;New author&lt;/strong&gt; to add a document for each author, with &lt;code class=&quot;highlighter-rouge&quot;&gt;Title&lt;/code&gt; representing the name of the author.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/author-collection.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;manually&quot;&gt;Manually&lt;/h3&gt;
+
+&lt;p&gt;To create your collection manually, create a Markdown file for each author in a directory &lt;code class=&quot;highlighter-rouge&quot;&gt;_authors&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_authors/
+  morgan-housel.markdown
+  craig-shapiro.markdown
+  pharrell-williams.markdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, set the &lt;a href=&quot;https://jekyllrb.com/docs/collections/#step-3-optionally-render-your-collections-documents-into-independent-files&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt;&lt;/a&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; so that Jekyll will generate a page for each author:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
+  authors:
+    title: Authors
+    output: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;tip&quot;&gt;When creating your collection in Siteleaf, the &lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt; setting is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; by default.&lt;/p&gt;
+
+&lt;p&gt;Next, fill out each author document. Here, we have &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; (for the author’s name), &lt;code class=&quot;highlighter-rouge&quot;&gt;twitter&lt;/code&gt;, and Markdown content representing the bio. This is &lt;code class=&quot;highlighter-rouge&quot;&gt;craig-shapiro.markdown&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Craig Shapiro&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cshapiro&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+Craig Shapiro is a founder and managing partner of Collaborative Fund.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;define-defaults&quot;&gt;Define defaults&lt;/h2&gt;
+
+&lt;p&gt;Set the default metadata fields for each author document in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. You can define them however you like (for example, you could add a &lt;code class=&quot;highlighter-rouge&quot;&gt;profile_image&lt;/code&gt; field). In this case, we’ve added a &lt;code class=&quot;highlighter-rouge&quot;&gt;twitter&lt;/code&gt; field for their Twitter handle.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults:
+- scope:
+    path: ''
+    type: authors
+  values:
+    permalink: &quot;/blog/authors/:title/&quot;
+    layout: author
+    twitter: 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;tip&quot;&gt;If you created your authors collection in Siteleaf, you could define the defaults for each author prior to adding new authors. This way, the metadata fields appear automatically in the UI for each new author.&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-with-siteleaf&quot;&gt;Configure with Siteleaf&lt;/h2&gt;
+
+&lt;p&gt;We can make it easy for content managers to specify the author for new posts in the Siteleaf UI with an autocomplete dropdown. To do so, we take advantage of &lt;a href=&quot;https://learn.siteleaf.com/content/metadata/#collection-fields&quot;&gt;associated&lt;/a&gt; metadata fields in Siteleaf.&lt;/p&gt;
+
+&lt;p&gt;Just name your field the singular &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; to your plural collection &lt;code class=&quot;highlighter-rouge&quot;&gt;authors&lt;/code&gt;. So, a post’s metadata will look something like:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;My Blog Post&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2010-01-19 13:24:00&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Craig Shapiro&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, set up &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; as a default field for each post. You can also enter a default author name if you want, for example &lt;code class=&quot;highlighter-rouge&quot;&gt;author: Collaborative Team&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/blog/:title/&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This tells Siteleaf to populate each new post with that metadata field automatically. Here’s how it looks in Siteleaf:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/author-select.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-your-templates&quot;&gt;Set up your templates&lt;/h2&gt;
+
+&lt;p&gt;Now that your authors collection is set up and configured with Siteleaf, all you need to do is write them into your templates.&lt;/p&gt;
+
+&lt;p&gt;In your &lt;a href=&quot;http://www.collaborativefund.com/blog/the-villain-test/&quot;&gt;post&lt;/a&gt; template, you can display the post’s author and link to the author page.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post.author&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then in the &lt;a href=&quot;http://www.collaborativefund.com/blog/authors/craig/&quot;&gt;author page&lt;/a&gt; template, you can list the posts by that author as well as show other fields you’ve defined, such as their bio (&lt;code class=&quot;highlighter-rouge&quot;&gt;page.content&lt;/code&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1 class=&quot;name&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&quot;bio&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/div&amp;gt;
+
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'author'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;page.title&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;posts&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finally, you can list all authors for your site in an &lt;a href=&quot;http://www.collaborativefund.com/blog/authors/&quot;&gt;index page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;author&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.authors&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;/h2&gt;
+
+&lt;p&gt;You did it! You now know how to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create an authors collection&lt;/li&gt;
+  &lt;li&gt;define metadata fields for each author&lt;/li&gt;
+  &lt;li&gt;configure Siteleaf with an autocomplete author field for new posts&lt;/li&gt;
+  &lt;li&gt;set up your post template to display the post’s author and link to their page&lt;/li&gt;
+  &lt;li&gt;set up your author page template with relevant author information&lt;/li&gt;
+  &lt;li&gt;set up an author index template to list all authors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;Stay tuned for the next tutorial in this series, where we’ll show you some approaches for working with tags in Jekyll and Siteleaf.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 20 Oct 2016 14:13:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/author-pages-in-jekyll-and-siteleaf/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/author-pages-in-jekyll-and-siteleaf/</guid>
+        
+        <category>tutorial</category>
+        
+        <category>jekyll</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll environments</title>
+        <description>&lt;p&gt;When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; - this is your local machine where theme development takes place. Run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; and your site will be accessible at &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;staging&lt;/code&gt; - sites on paid plans come with &lt;a href=&quot;https://learn.siteleaf.com/sites/preview/&quot;&gt;preview functionality&lt;/a&gt;. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;production&lt;/code&gt; - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Starting today, Siteleaf will now set the &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;jekyll.environment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; variable to one of the environments above (previously both preview and publish used &lt;code class=&quot;highlighter-rouge&quot;&gt;production&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;This allows you to set up conditional code in your theme to render content or add functionality based on the current environment. For example you may want to alter image processing, insert a message, disable analytics, or even conduct user testing in one of your environments.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1-client-feedback-on-staging&quot;&gt;Example 1: Client feedback on staging&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/usersnap.png&quot; alt=&quot;Using Usersnap to gather client feedback in Siteleaf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s say we are working with a client on a new website. To help them provide constructive feedback during development, we can add a feedback widget to our site and enable it only on the &lt;code class=&quot;highlighter-rouge&quot;&gt;staging&lt;/code&gt; (preview) environment.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;https://www.quora.com/What-is-the-best-website-feedback-widget-available-for-free&quot;&gt;many options&lt;/a&gt; for feedback widgets including &lt;a href=&quot;https://usersnap.com&quot;&gt;Usersnap&lt;/a&gt; and &lt;a href=&quot;https://webengage.com&quot;&gt;WebEngage&lt;/a&gt;, but we’ll go with Usersnap since it supports annotated screenshots and can pipe responses right into our Slack channel.&lt;/p&gt;
+
+&lt;p&gt;We can simply wrap the embed code provided by Usersnap around a Liquid conditional to check if &lt;code class=&quot;highlighter-rouge&quot;&gt;jeyll.environment&lt;/code&gt; is equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;staging&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if jekyll.environment == 'staging' %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;script&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'//api.usersnap.com/load/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+          &lt;span class=&quot;s1&quot;&gt;'YOUR-TOKEN.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})();&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;example-2-production-only-analytics&quot;&gt;Example 2: Production-only analytics&lt;/h3&gt;
+
+&lt;p&gt;To keep our Google Analytics clean of test traffic, we can wrap the tracking code around a similar conditional checking for the &lt;code class=&quot;highlighter-rouge&quot;&gt;production&lt;/code&gt; environment.&lt;/p&gt;
+
+&lt;p&gt;For good measure, we could also move the property ID to a &lt;a href=&quot;https://learn.siteleaf.com/content/metadata/&quot;&gt;site metadata&lt;/a&gt; field called &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.google_analytics&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; in case we later need to change it.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if jekyll.environment == 'production' %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'GoogleAnalyticsObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)},&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'//www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ga'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{{ site.google_analytics }}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'send'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pageview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;example-3-e-commerce-testing&quot;&gt;Example 3: E-commerce testing&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://snipcart.com&quot;&gt;Snipcart&lt;/a&gt; is a simple way to add e-commerce to Siteleaf sites. It comes with both a Live and Test mode, so you can create sample purchases and test the checkout process in isolation. Each mode has a unique API key, so we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll.environment&lt;/code&gt; to apply the Live code to &lt;code class=&quot;highlighter-rouge&quot;&gt;production&lt;/code&gt; and the Test code in &lt;code class=&quot;highlighter-rouge&quot;&gt;staging&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if jekyll.environment == 'production' %}
+  {% assign snipcart_api_key = 'LIVE-API-KEY' %}
+{% else %}
+  {% assign snipcart_api_key = 'TEST-API-KEY' %}
+{% endif %}
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script 
+  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.snipcart.com/scripts/2.0/snipcart.js&quot;&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;data-api-key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ snipcart_api_key }}&quot;&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;snipcart&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;testing-environments&quot;&gt;Testing environments&lt;/h3&gt;
+
+&lt;p&gt;To test this functionality locally and ensure your conditionals work as intended, set &lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV&lt;/code&gt; when running &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;. For example we could see how &lt;code class=&quot;highlighter-rouge&quot;&gt;production&lt;/code&gt; would render:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 10 Oct 2016 11:30:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/jekyll-environments/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/jekyll-environments/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>tip</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll Plugins and Themes are here 🎉</title>
+        <description>&lt;p&gt;Today’s the day! We’re excited to update to Jekyll 3.2, which brings over &lt;a href=&quot;http://jekyllrb.com/docs/history/#minor-enhancements-v3-2-0&quot;&gt;100 improvements&lt;/a&gt; including &lt;a href=&quot;https://learn.siteleaf.com/themes/gem-based-themes/&quot;&gt;Gem-based themes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In addition to themes, we’re extremely happy to introduce support for third-party &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;Jekyll plugins&lt;/a&gt;. Sites on the new &lt;a href=&quot;/plans&quot;&gt;Team, Business, and Enterprise plans&lt;/a&gt; can now install and leverage custom plugins to extend the functionality of Jekyll and Siteleaf. As always, &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/#whitelisted-plugins&quot;&gt;whitelisted plugins&lt;/a&gt; are supported on all other plans.&lt;/p&gt;
+
+&lt;p&gt;Sites on the free developer plan can make use of the new GitHub Pages-approved &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;Minima theme&lt;/a&gt;, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It is a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites.&lt;/p&gt;
+
+&lt;p&gt;We also gave the Jekyll build process a nice speed boost across the board. In some cases, you may notice your site building up to 2x as fast!&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How it works&lt;/h3&gt;
+
+&lt;p&gt;When previewing or publishing your site, Siteleaf will now look for an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; and install any custom Gem-based themes and plugins prior to building. If you’re writing your own plugins, you can also include custom Ruby code in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_plugins&lt;/code&gt; directory as outlined in the &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Jekyll docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Custom plugins are supported even when publishing to GitHub Pages. Just make sure to choose the “Compiled by Siteleaf” format in your hosting settings, and Siteleaf will pre-compile your site before pushing it to GitHub.&lt;/p&gt;
+
+&lt;p&gt;See our docs for full instructions on &lt;a href=&quot;https://learn.siteleaf.com/themes/gem-based-themes/&quot;&gt;using themes&lt;/a&gt; and &lt;a href=&quot;https://learn.siteleaf.com/themes/jekyll-plugins/&quot;&gt;plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;try-it-out&quot;&gt;Try it out&lt;/h3&gt;
+
+&lt;p&gt;Interested in trying custom plugins but haven’t yet upgraded to the Team (or higher) plan yet? &lt;a href=&quot;mailto:billing@siteleaf.com?subject=Team%20trial&quot;&gt;Get in touch&lt;/a&gt; and we’d be happy to give you a demo.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Sep 2016 12:10:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/plugins-and-themes-are-here/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/plugins-and-themes-are-here/</guid>
+        
+        <category>jekyll</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>GitHub Integrations Directory</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/uploads/github-integrations.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re happy to be included by GitHub in the official &lt;a href=&quot;https://github.com/integrations/siteleaf&quot;&gt;GitHub Integrations Directory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Connect your website repo with Siteleaf and your Markdown content is editable in a friendly CMS designed with non-technical writers and clients in mind. Build sites using the tools you love, and make it easy to others to contribute without having to write code or understand Git.&lt;/p&gt;
+
+&lt;p&gt;Visit the &lt;a href=&quot;https://github.com/integrations/siteleaf&quot;&gt;Siteleaf integration&lt;/a&gt; and start using Siteleaf as a CMS for your Jekyll and GitHub Pages sites today.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Aug 2016 14:59:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/github-integrations-directory/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/github-integrations-directory/</guid>
+        
+        <category>announcement</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Customizing the Siteleaf admin</title>
+        <description>&lt;iframe src=&quot;https://player.vimeo.com/video/177560478?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p class=&quot;caption&quot;&gt;Watch &lt;a href=&quot;https://vimeo.com/177560478&quot;&gt;Customizing the Siteleaf admin&lt;/a&gt; on Vimeo&lt;/p&gt;
+
+&lt;p&gt;Siteleaf v2 was built to be be customized. In this tutorial, we’ll dive deeper into the Siteleaf admin and learn some tricks on how to tweak the interface to suit our needs. We’ll cover collections, permalinks, metadata, smart fields, defaults, and user roles.&lt;/p&gt;
+
+&lt;p&gt;If you followed the previous tutorials, you should now have a &lt;a href=&quot;/blog/jekyll-from-scratch/&quot;&gt;basic understanding of Jekyll&lt;/a&gt; and the &lt;a href=&quot;/blog/connecting-github/&quot;&gt;Siteleaf admin&lt;/a&gt;. Feel free to check those out first if you haven’t.&lt;/p&gt;
+
+&lt;p&gt;Watch the video above, or follow along with the text version below.&lt;/p&gt;
+
+&lt;h2 id=&quot;collections&quot;&gt;Collections&lt;/h2&gt;
+
+&lt;p&gt;By default, you should have 2 content areas: &lt;strong&gt;Pages&lt;/strong&gt; and &lt;strong&gt;Posts&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pages is your home for standalone content like your about page, contact, FAQ, and so on. Pages can be drag and drop ordered, and nested using the move icon next to each page.&lt;/p&gt;
+
+&lt;p&gt;Posts is a default Jekyll &lt;a href=&quot;http://learn.siteleaf.com/content/collections/&quot;&gt;collection&lt;/a&gt; that’s blog-aware, so each piece of content here (called &lt;a href=&quot;http://learn.siteleaf.com/content/documents/&quot;&gt;documents&lt;/a&gt;) is stamped with a date, and generally shown in date-descending order.&lt;/p&gt;
+
+&lt;p&gt;The Posts collection also comes with some special features: &lt;strong&gt;drafts&lt;/strong&gt;, &lt;strong&gt;tags&lt;/strong&gt;, and &lt;strong&gt;categories&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If these features are useful to you, but the name “Posts” isn’t quite doing it for you, you’re welcome to rename this collection under &lt;strong&gt;Collection settings&lt;/strong&gt;.  For example, I might want to call mine “Stories” instead.&lt;/p&gt;
+
+&lt;p&gt;For sites that need a little more than Pages and Posts, you can create additional collection to group bits of content together. Just click &lt;strong&gt;New collection&lt;/strong&gt; in the left sidebar, and give it a name. For my website, I want to a create a series of documents for authors. So I’ll enter “Authors” here.&lt;/p&gt;
+
+&lt;p&gt;The “Authors” collection will now show up in the sidebar next to Pages and Posts, and we can begin to create new author documents within. Like pages, documents within a collection can be reordered and even nested.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/customizing-the-siteleaf-admin-authors.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keep in mind, you’ll need implement this sort behavior in your theme as well. Siteleaf will save a numeric &lt;code class=&quot;highlighter-rouge&quot;&gt;position&lt;/code&gt; field to front matter for you, so you can apply a Liquid &lt;a href=&quot;https://jekyllrb.com/docs/templates/&quot;&gt;sort filter&lt;/a&gt; on this field.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% assign sorted_authors = site.authors | sort:&quot;position&quot; %}
+{% for author in sorted_authors %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;{{ author.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endfor %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;permalinks&quot;&gt;Permalinks&lt;/h2&gt;
+
+&lt;p&gt;Within the new “Authors” collection, you’ll see a tab for &lt;strong&gt;Collection settings&lt;/strong&gt;. Here you can decide whether you want documents in this collection to be outputted to your site. Feel free to turn this off if you don’t need a separate page (or “permalink”) generated for each document, and your site should render a little faster because of it.&lt;/p&gt;
+
+&lt;p&gt;For my site I do want a unique page for each author, so I’ll leave it on.&lt;/p&gt;
+
+&lt;p&gt;By default, documents will have the permalink structure &lt;code class=&quot;highlighter-rouge&quot;&gt;/:collection/:path&lt;/code&gt; (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/authors/danny&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;In addition to the &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;site-wide permalink setting&lt;/a&gt; (typically set to &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;pretty&lt;/code&gt;), you can customize collection permalinks in two ways:&lt;/p&gt;
+
+&lt;p&gt;First, you can define a global permalink format for all documents in this particular collection. Just enter your preferred format here in the collection’s &lt;strong&gt;Permalink&lt;/strong&gt; field (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/awesome/:path&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p class=&quot;tip&quot;&gt;For pretty URLs, end your permalink setting with a trailing slash (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/awesome/:path/&lt;/code&gt;). You can refer to Jekyll’s documentation for a full list of accepted &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;permalink variables&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Second, if you only want to change a single document’s permalink, you can do that right within the document itself. If you are happy with the folder structure, but just want to customize the document’s slug (the last part of the URL), you can do that by clicking the path edit icon under the title.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/customizing-the-siteleaf-admin-path.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To override this structure entirely, you can expand &lt;strong&gt;Advanced options&lt;/strong&gt; and fill in &lt;em&gt;any&lt;/em&gt; URL of your choice in the document’s Permalink field (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/tanner/&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;/tanner.html&lt;/code&gt;). This behavior is also available on pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;metadata&quot;&gt;Metadata&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://learn.siteleaf.com/content/metadata/&quot;&gt;Metadata&lt;/a&gt; are additional pieces of data which you can attach to your pages, documents, collections, and even site-wide. Metadata fields give you a ton of power and flexibility to create a system that fits your content.&lt;/p&gt;
+
+&lt;p&gt;In addition to simple metadata like strings, Siteleaf also supports arrays (which we call &lt;strong&gt;Lists&lt;/strong&gt;) and nested key-value pairs (which we call &lt;strong&gt;Objects&lt;/strong&gt;). To change an existing field’s type, click the ellipsis icon next to the field and choose convert.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/customizing-the-siteleaf-admin-metadata-convert.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All metadata is drag and drop sortable, and infinitely nestable.&lt;/p&gt;
+
+&lt;h3 id=&quot;site&quot;&gt;Site&lt;/h3&gt;
+
+&lt;p&gt;Site metadata is located under &lt;strong&gt;Settings &amp;gt; General&lt;/strong&gt;. This is handy for site-wide variables like copyright info or social media handles. Metadata here can be accessed in your theme using &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.field_name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;, or square brackets (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;site['field name']&lt;/code&gt;) if your field name contains a space. These fields will be saved to your site’s &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file, along with Jekyll configuration settings.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Siteleaf will show Jekyll configuration settings as locked to prevent accidental edits, but as an admin, you can toggle these on by clicking &lt;strong&gt;Unlock advanced fields&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;collection&quot;&gt;Collection&lt;/h3&gt;
+
+&lt;p&gt;You can also add metadata at the collection level, under &lt;strong&gt;Collection settings&lt;/strong&gt;. This is handy if you have many collections, and want to provide some additional context for each, like an icon or description. Metadata here can be accessed in your theme within the &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.collections&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;, and is also saved in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% for collection in site.collections %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;{{ collection.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;{{ collection.intro }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+{% endfor %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;pages-and-documents&quot;&gt;Pages and Documents&lt;/h3&gt;
+
+&lt;p&gt;Finally, you can add metadata to individual documents and pages. This is useful for adding supporting content like images, text snippets, related links, authors, and more. Metadata here can be accessed using &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;page.field_name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;, and is equivalent to &lt;a href=&quot;https://jekyllrb.com/docs/frontmatter/&quot;&gt;Jekyll front matter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;smart-fields&quot;&gt;Smart fields&lt;/h2&gt;
+
+&lt;p&gt;In addition to regular metadata fields, Siteleaf will pick up on what we call &lt;a href=&quot;http://learn.siteleaf.com/content/metadata/#smart-field-names&quot;&gt;smart field names&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-file.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get a file uploader, name your field (or end it) with &lt;code class=&quot;highlighter-rouge&quot;&gt;asset&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;file&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;image&lt;/code&gt;. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;header image&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;pdf_file&lt;/code&gt;. You should see an upload icon appear, and an image preview once a file has been chosen. This also works with multiple files in a list, which is perfect for a simple slideshow or gallery.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-editor.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a full text editor, use &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;excerpt&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;md&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;text&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-date.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a date/time picker, use “at”, “date”, or “datetime”. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;starts at&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;event_date&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-boolean.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a boolean or checkbox, start your field name with &lt;code class=&quot;highlighter-rouge&quot;&gt;is&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;has&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;was&lt;/code&gt;. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;is featured&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;has_registration&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-collection.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Siteleaf also supports “collection fields” to associate documents from other collections. Since we have a collection called “Authors”, we can add a field called &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;authors&lt;/code&gt;) to this document. This field will automatically pull in a list our authors, and we can choose one or more to form an association. This works a little like a relational database, and is a great way to add additional taxonomy groups to your content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://learn.siteleaf.com/uploads/meta-color.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally you can get a color picker by ending your field name with &lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; or &lt;a href=&quot;http://learn.siteleaf.com/content/metadata/#color-fields&quot;&gt;specific formats&lt;/a&gt; like &lt;code class=&quot;highlighter-rouge&quot;&gt;hex&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;rgb&lt;/code&gt;. This is handy for adding configurable accent or background colors to your posts.&lt;/p&gt;
+
+&lt;h2 id=&quot;defaults&quot;&gt;Defaults&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve created a few metadata fields, we also might want to take advantage of &lt;a href=&quot;http://learn.siteleaf.com/content/defaults/&quot;&gt;default fields&lt;/a&gt; to have certain fields show up automatically on new documents and pages. This way our editors only need to fill in the blanks.&lt;/p&gt;
+
+&lt;p&gt;Defaults are located in Jekyll’s &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file, and can be applied site-wide, or scoped to a particular collection (using &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt;) or directory (using &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Assuming I want to apply some defaults to all posts, I can write some defaults scoped to &lt;code class=&quot;highlighter-rouge&quot;&gt;posts&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt; 
+  &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;is featured&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# blank values are okay here&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can include values to be used as fallback, or just define the basic structure here to help editors out. A good trick is to copy and paste the existing metadata structure from the front matter of one of your existing documents.&lt;/p&gt;
+
+&lt;p&gt;You can refer to our &lt;a href=&quot;/blog/customizing-the-siteleaf-admin/&quot;&gt;documentation&lt;/a&gt; for more on the syntax, and remember to use smart field names here to customize the UI.&lt;/p&gt;
+
+&lt;p&gt;Now when we create a new post, we should see these default fields and any values we provided. Defaults are also merged into existing posts to provide consistent structure and fallback values. Content editors can fill these fields out, or leave them blank to accept the default values.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-roles&quot;&gt;User roles&lt;/h2&gt;
+
+&lt;p&gt;Now that we have the CMS customized to our liking, it’s time to invite some editors. Going into the &lt;strong&gt;Users&lt;/strong&gt; section, we can see a list of everyone currently added to the site, and invite users by email address.&lt;/p&gt;
+
+&lt;p&gt;If you are on a Team plan or higher, you can control permissions with &lt;a href=&quot;http://learn.siteleaf.com/sites/users/&quot;&gt;user roles&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Admin&lt;/strong&gt; gives full privileges, allowing the user to manage and publish all content and theme files. This is great for people who are helping build the site, like a developer or designer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Publisher&lt;/strong&gt; is similar to an admin, but prevents access to theme files or site settings. This is an ideal role for non-technical content editors or clients.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Writer&lt;/strong&gt; is the most limited role. These users can only create and manage their own content. And only in draft or hidden mode, they cannot publish content live on their own.&lt;/p&gt;
+
+&lt;p&gt;So you can keep that in mind when inviting users and decide how much permission you wish to give them.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;For further reading and examples check out our help site &lt;a href=&quot;http://learn.siteleaf.com&quot;&gt;learn.siteleaf.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned to our blog for &lt;a href=&quot;/blog/tags/tutorial&quot;&gt;more tutorials&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Aug 2016 14:30:00 -0400</pubDate>
+        <link>http://localhost:4000/myBlog/blog/customizing-the-siteleaf-admin/</link>
+        <guid isPermaLink="true">http://localhost:4000/myBlog/blog/customizing-the-siteleaf-admin/</guid>
+        
+        <category>tutorial</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        <category>video</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Blog" />
+<meta name="description" content="Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more." />
+<meta property="og:description" content="Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more." />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-11-04T15:45:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@quinn" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Blog",
+"datePublished": "2015-11-04T15:45:00-05:00",
+"description": "Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="twitter:image" content="http://localhost:4000/assets/avatar.png"/>
+    <title>Blog - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="blog">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  <!-- blog index, inherit from first tag of first post -->
+  
+  
+  
+
+<div class="headerWrap bg--yellow">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">Blog</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/add-ssl-to-your-site-free/">Add SSL to your site for free</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tip/" class="article__tag__link">Tip</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2017-01-12T10:00:00-05:00">Jan 12, 2017</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/myBlog/uploads/https.svg" alt="Add SSL to your site free" /></p>
+
+<p>Is your website encrypted?</p>
+
+<p>Back in 2014, Google announced it would begin using <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">HTTPS encryption as search ranking signal</a>. If you are still serving your site over basic HTTP in 2017, you may be missing a key part in your SEO strategy.</p>
+
+<p>The good news? It’s never been easier to jump aboard the HTTPS train and secure your traffic.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a> (also known as HTTP over <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>, or Transport Layer Security) uses SSL/TLS certificates to identify your website and encrypt data in transit to your website’s visitors.</p>
+
+<p>Google will be pushing further with the release of Chrome 56 later this month, <a href="https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html">announcing</a> it will mark all non-HTTPS pages containing password and credit card input fields as “Not Secure”. Eventually, Chrome plans to show a <a href="https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn">Not Secure warning for all pages served over HTTP</a>, regardless of whether or not the page contains sensitive input fields. Here’s what visitors will see in the new version:</p>
+
+<p><img src="/myBlog/uploads/chrome-https.png" alt="Treatment of HTTP pages with password or credit card form fields in Chrome 56" /></p>
+
+<p>There are several ways obtain an SSL certificate for your site — many of them are completely free, and only take a few minutes to set up. Since Siteleaf supports publishing to any web host, you can choose the option that best fits your needs.</p>
+
+<p>We’ll review our favorites in this blog post, starting with CloudFront (which we use ourselves for this blog).</p>
+
+
+    
+    
+      <a href="/myBlog/blog/add-ssl-to-your-site-free/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/more-whitelisted-plugins/">More whitelisted plugins</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-12-09T16:42:00-05:00">Dec 09, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>Hot on the heels of the <a href="/blog/jekyll-update-and-new-whitelisted-plugins/">Jekyll 3.3.1 update earlier this week</a>, four additional plugins have been <a href="https://github.com/blog/2289-publishing-with-github-pages-now-as-easy-as-1-2-3">whitelisted for GitHub Pages</a>.</p>
+
+<p>These plugins are specifically geared toward software documentation and open source code projects on GitHub, but may come in handy for any type of website.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/more-whitelisted-plugins/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jekyll-update-and-new-whitelisted-plugins/">Jekyll update & new whitelisted plugins</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-12-06T14:25:00-05:00">Dec 06, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>We have updated our default Jekyll version from 3.3.0 to 3.3.1, to match the <a href="https://github.com/blog/2290-relative-links-for-github-pages">recent update at GitHub Pages</a>.</p>
+
+<p>This update includes a few minor enhancements and bug fixes. For a full list of revisions <a href="https://jekyllrb.com/docs/history/#v3-3-1">check out the release notes</a>.</p>
+
+<p>Also included in this update are two new <a href="https://learn.siteleaf.com/themes/jekyll-plugins/">whitelisted plugins</a>.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jekyll-update-and-new-whitelisted-plugins/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jamstack-ecommerce/">JAMstack e-commerce with Siteleaf & Snipcart</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-25T10:00:00-04:00">Oct 25, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/uploads/jamstack-ecommerce.png" alt="" /></p>
+
+<p><em>This is a guest post by Charles Ouellet, co-founder of <a href="https://snipcart.com/">Snipcart</a>.</em></p>
+
+<p>If you’re reading this blog, you know static web development is trendy, to say the least. Unless you just got out of a years-long meditation retreat in a cave with no Internet. If that’s your case, well, hum, welcome back!</p>
+
+<p>At Snipcart, our developer-first shopping cart platform, we’ve been diving into static site generators and related tools for 2+ years now. And we believe <a href="https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/">they are the next big thing</a>.</p>
+
+<p>A short while ago, a friend of ours gave an <a href="https://vimeo.com/163522126">in-depth conference on why “static” is a bad word</a> for the modern front-end stack, aka the <strong>JAMstack</strong> (JavaScript, APIs, &amp; Markup).</p>
+
+<p>And he’s right:</p>
+
+<p><img src="/uploads/jamstack-ecommerce-static-definition.png" alt="Static definition" /></p>
+
+<p>There’s nothing “undesirable” or “uninteresting” about the modern static websites &amp; apps developers are pushing online. It’s in fact quite the opposite.</p>
+
+<p>As a community, we need to give this new paradigm a name worthy of its actual value, and that’s exactly what the <strong><a href="http://jamstack.org/">JAMstack</a></strong> is.</p>
+
+<p>But this post isn’t a philosophical essay on the benefits of the API economy and the modular development approach. It’s about putting together a killer e-commerce workflow that ticks all of the boxes on the JAMstack checklist:</p>
+
+<ul>
+  <li>Entire site on a CDN</li>
+  <li>Atomic deploys</li>
+  <li>Instant cache invalidation</li>
+  <li>Everything lives in Git</li>
+  <li>Automated builds</li>
+</ul>
+
+<p>So today, I’m going to show you how to build an <strong>API-centric, fast and secure e-commerce project</strong> in 5 simple steps. And I’m going to use the right JAMstack tools to do so.</p>
+
+<p>Let’s do it!</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jamstack-ecommerce/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/">Creating tag pages with Jekyll and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-21T12:13:00-04:00">Oct 21, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>In this tutorial, we show you approaches for creating tag pages in Jekyll and Siteleaf.</p>
+
+<p class="note">This is part two of a tutorial series on Jekyll and Siteleaf. Check out part one on <a href="/blog/author-pages-in-jekyll-and-siteleaf/">author pages</a>.</p>
+
+<h2 id="the-plugin-approach">The plugin approach</h2>
+
+<p>If you plan to use more than a dozen or so tags, a <a href="https://jekyllrb.com/docs/plugins/">plugin</a> can save you from having to create individual documents for each. This approach lets authors and content managers easily create new tags on the fly, while having autocomplete available in the Siteleaf UI.</p>
+
+<p><img src="/uploads/tags-select.gif" alt="" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/author-pages-in-jekyll-and-siteleaf/">Creating author pages with Jekyll and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-20T14:13:00-04:00">Oct 20, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>At Oak, we recently launched a new website for our friends at <a href="http://www.collaborativefund.com/">Collaborative Fund</a>, built on Siteleaf. The site features a <a href="http://www.collaborativefund.com/blog/">blog</a> for their prolific content, including <a href="http://www.collaborativefund.com/blog/authors/morgan/">author</a> and <a href="http://www.collaborativefund.com/blog/tags/featured/">tag</a> pages.</p>
+
+<p>In this tutorial, we show you how to set up your Jekyll blog with author pages and leverage Siteleaf to maintain your content.</p>
+
+<p class="tip">The approach we use in this tutorial can be easily adapted to other sets of content as well, not just authors. It also is plugin-less, which means it can be readily published to GitHub Pages on Siteleaf’s free Developer plan.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/author-pages-in-jekyll-and-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jekyll-environments/">Jekyll environments</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tip/" class="article__tag__link">Tip</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-10T11:30:00-04:00">Oct 10, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>When working with Jekyll and Siteleaf, you typically have 3 distinct environments to help you code, preview, and publish your site:</p>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">development</code> - this is your local machine where theme development takes place. Run <code class="highlighter-rouge">jekyll serve</code> and your site will be accessible at <code class="highlighter-rouge">http://localhost:4000</code>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">staging</code> - sites on paid plans come with <a href="https://learn.siteleaf.com/sites/preview/">preview functionality</a>. Hit the “Generate preview” button in Siteleaf, and your site will be built with a unique URL without affecting your live site. This URL is shareable, so you can send it to colleagues outside of Siteleaf for feedback or proofreading.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">production</code> - where your final website is generated and hosted. This could be GitHub Pages, Amazon S3, Rackspace Cloud Files, or any host that supports (S)FTP (DigitalOcean, MediaTemple, etc).</p>
+  </li>
+</ol>
+
+<p>Starting today, Siteleaf will now set the <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">jekyll.environment</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> variable to one of the environments above (previously both preview and publish used <code class="highlighter-rouge">production</code>).</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jekyll-environments/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/plugins-and-themes-are-here/">Jekyll Plugins and Themes are here 🎉</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-09-15T12:10:00-04:00">Sep 15, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>Today’s the day! We’re excited to update to Jekyll 3.2, which brings over <a href="http://jekyllrb.com/docs/history/#minor-enhancements-v3-2-0">100 improvements</a> including <a href="https://learn.siteleaf.com/themes/gem-based-themes/">Gem-based themes</a>.</p>
+
+<p>In addition to themes, we’re extremely happy to introduce support for third-party <a href="https://learn.siteleaf.com/themes/jekyll-plugins/">Jekyll plugins</a>. Sites on the new <a href="/plans">Team, Business, and Enterprise plans</a> can now install and leverage custom plugins to extend the functionality of Jekyll and Siteleaf. As always, <a href="https://learn.siteleaf.com/themes/jekyll-plugins/#whitelisted-plugins">whitelisted plugins</a> are supported on all other plans.</p>
+
+<p>Sites on the free developer plan can make use of the new GitHub Pages-approved <a href="https://github.com/jekyll/minima">Minima theme</a>, while all paid plans (including legacy and Personal plans) can take full advantage of custom themes. Themes package layouts, includes, and stylesheets in a way that can be overridden by your site’s content. It is a great way to maintain a separation of content and code, and makes it possible to share themes across multiple sites.</p>
+
+<p>We also gave the Jekyll build process a nice speed boost across the board. In some cases, you may notice your site building up to 2x as fast!</p>
+
+
+    
+    
+      <a href="/myBlog/blog/plugins-and-themes-are-here/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/github-integrations-directory/">GitHub Integrations Directory</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-08-12T14:59:00-04:00">Aug 12, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/uploads/github-integrations.png" alt="" /></p>
+
+<p>We’re happy to be included by GitHub in the official <a href="https://github.com/integrations/siteleaf">GitHub Integrations Directory</a>.</p>
+
+<p>Connect your website repo with Siteleaf and your Markdown content is editable in a friendly CMS designed with non-technical writers and clients in mind. Build sites using the tools you love, and make it easy to others to contribute without having to write code or understand Git.</p>
+
+<p>Visit the <a href="https://github.com/integrations/siteleaf">Siteleaf integration</a> and start using Siteleaf as a CMS for your Jekyll and GitHub Pages sites today.</p>
+
+    
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/customizing-the-siteleaf-admin/">Customizing the Siteleaf admin</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-08-04T14:30:00-04:00">Aug 04, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/177560478?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/177560478">Customizing the Siteleaf admin</a> on Vimeo</p>
+
+<p>Siteleaf v2 was built to be be customized. In this tutorial, we’ll dive deeper into the Siteleaf admin and learn some tricks on how to tweak the interface to suit our needs. We’ll cover collections, permalinks, metadata, smart fields, defaults, and user roles.</p>
+
+<p>If you followed the previous tutorials, you should now have a <a href="/blog/jekyll-from-scratch/">basic understanding of Jekyll</a> and the <a href="/blog/connecting-github/">Siteleaf admin</a>. Feel free to check those out first if you haven’t.</p>
+
+<p>Watch the video above, or follow along with the text version below.</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>By default, you should have 2 content areas: <strong>Pages</strong> and <strong>Posts</strong>.</p>
+
+<p>Pages is your home for standalone content like your about page, contact, FAQ, and so on. Pages can be drag and drop ordered, and nested using the move icon next to each page.</p>
+
+<p>Posts is a default Jekyll <a href="http://learn.siteleaf.com/content/collections/">collection</a> that’s blog-aware, so each piece of content here (called <a href="http://learn.siteleaf.com/content/documents/">documents</a>) is stamped with a date, and generally shown in date-descending order.</p>
+
+<p>The Posts collection also comes with some special features: <strong>drafts</strong>, <strong>tags</strong>, and <strong>categories</strong>.</p>
+
+<p>If these features are useful to you, but the name “Posts” isn’t quite doing it for you, you’re welcome to rename this collection under <strong>Collection settings</strong>.  For example, I might want to call mine “Stories” instead.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/customizing-the-siteleaf-admin/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/image-and-video-processing-for-your-static-site/">Image and video processing for your static site</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/aws/" class="article__tag__link">AWS</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-07-17T10:16:00-04:00">Jul 17, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>Static HTML sites are great — there’s no reliance on a server or database, you can host them for cheap, archive an entire copy on a USB drive, and when they’re properly optimized they can be blazing fast. Optimization can be tricky when it comes to static sites though. Since there’s no server processing and generating your pages, you don’t have the benefit of using something like <a href="http://www.imagemagick.org/">ImageMagick</a> alongside a gem like CarrierWave, which makes it easy to resize and optimize your images when they’re uploaded. The same goes for video. If you’re not hosting your video on YouTube or Vimeo, you’re responsible for transcoding the video into the various formats favored by the different browsers. So what’s a developer to do?</p>
+
+<h2 id="processing-as-a-service">Processing as a service</h2>
+
+<p>One option is to use a 3rd party. There’s been a handful of companies who have started offering image and video processing as a service. These services are a great option if you don’t want to maintain your own solution, are “on demand”, and make it really simple to get started. To name just a few:</p>
+
+<p><img src="/uploads/imgix-servers.jpeg" alt="imgix servers" /></p>
+
+<p><strong><a href="http://imgix.com/">imgix</a></strong> generates your images on demand. In your image URLs you specify parameters like the dimensions, filters, face detection and type of cropping. Once the image is generated, it’s cached and served via their CDN. imgix charges $3 per “1,000 master images accessed each month” and $0.08 per GB of bandwidth.</p>
+
+<p><strong><a href="http://cloudinary.com/">Cloudinary</a></strong> offers processing services for images and video and is a bit more robust than imgix. Cloudinary offers a limited free plan with the next step up being $44/month.</p>
+
+<p><strong><a href="http://embed.ly/">Embedly</a></strong>, like Cloudinary, offers processing options for both images and video. They offer a limited free plan with the next step up being $23/month for video and $9/month for images.</p>
+
+<p><strong><a href="https://www.filestack.com/">Filestack</a></strong> is another. In addition to processing images and video, they offer document transformations and URL screenshots. They offer a limited free plan with the next step up being $49/month.</p>
+
+<h2 id="rolling-your-own-solution-with-aws">Rolling your own solution with AWS</h2>
+
+<p>What if you don’t want to pay a premium to subscribe to another service to process and serve your media? Typically you don’t need all the whiz-bang options offered by 3rd party services and a straightforward approach is typically enough for simple sites. Static sites can benefit just as much from a microservices approach as any other type of site, and if you host your site on S3, AWS gives us all the tools we need to processes our own images and video for much cheaper, though with a bit more setup and expertise required from our end.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/image-and-video-processing-for-your-static-site/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/connecting-github/">Connecting GitHub and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-24T13:00:00-04:00">Jun 24, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/171941124?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/171941124">Connecting GitHub and Siteleaf</a> on Vimeo</p>
+
+<p>This tutorial will show you how to connect and sync an existing Jekyll site from GitHub to Siteleaf, so you can edit content and preview your site in the cloud.</p>
+
+<p>If you are new to Jekyll, you may want to start with our <a href="/blog/jekyll-from-scratch/">Jekyll from Scratch</a> first tutorial to catch up on the basics.</p>
+
+<h2 id="what-is-github-sync">What is GitHub sync?</h2>
+
+<p>When developing your site, you’ll generally want to keep your theme and content in sync so you can see how everything looks in context.</p>
+
+<p>By enabling GitHub sync, any changes you make in your Git repo will be immediately saved to Siteleaf, and vice versa. So any edit you or anyone on your team makes in Siteleaf is synced and backed up. You can see a log of all changes in GitHub, and revert to any state in case anyone makes a mistake.</p>
+
+<p>We like to think of it as a time machine for your content.</p>
+
+<p><img src="/uploads/home__develop--github.jpg" alt="" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/connecting-github/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jekyll-from-scratch/">Jekyll from scratch</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-14T13:00:00-04:00">Jun 14, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/170526921?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/170526921">Jekyll from Scratch</a> on Vimeo</p>
+
+<p class="warning">This tutorial was created using Jekyll version 3.1.6. Newer versions (3.2+) will give you a theme by default instead of <code class="highlighter-rouge">_layouts</code> and <code class="highlighter-rouge">_includes</code>. For the purpose of this tutorial you may want to downgrade to Jekyll 3.1.6 (to remove other versions, run <code class="highlighter-rouge">gem uninstall jekyll</code>). Stay tuned for a future tutorial on themes!</p>
+
+<p>In this tutorial, we’ll show you how to get set up and develop websites locally using <a href="http://jekyllrb.com">Jekyll</a>. We’ll cover installation, creating a new site, file structure, and finally we’ll commit the new site to GitHub.</p>
+
+<p>This will give you a functional website that you can edit offline. Also make sure to check out the <a href="/blog/connecting-github">next tutorial</a> where we’ll connect our site to the new <a href="/blog/v2">Siteleaf v2</a> so we can edit content in the cloud.</p>
+
+<h2 id="what-is-jekyll">What is Jekyll?</h2>
+
+<p>Jekyll is a static website generator built on Ruby. It takes <a href="https://daringfireball.net/projects/markdown/">Markdown text</a> (your site’s content) and <a href="https://shopify.github.io/liquid/">Liquid templates</a> (your site’s theme) and outputs simple HTML that can be hosted pretty much anywhere.</p>
+
+<p>It’s also what powers <a href="https://pages.github.com">GitHub Pages</a>, which serves more than <a href="https://github.com/blog/1992-eight-lessons-learned-hacking-on-github-pages-for-six-months">half a million websites</a>.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To get started, we are going to install Jekyll, which is available to download as a Ruby gem. We’ll be following the quick-start instructions on <a href="http://jekyllrb.com">Jekyll’s website</a>.</p>
+
+<p>So let’s open the trusty command line.</p>
+
+<p>First, you’ll want to make sure you are running a recent version of Ruby. You can confirm by running the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ruby -v
+</code></pre>
+</div>
+
+<p>The <a href="https://www.ruby-lang.org/en/downloads/">latest stable</a> version is 2.3.1, but anything above 2.2 should be fine. If you need to upgrade, we recommend using something like <a href="http://rbenv.org">rbenv</a> to make it easy.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jekyll-from-scratch/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/introducing-learn/">Introducing learn.siteleaf.com</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-13T17:03:00-04:00">Jun 13, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><a href="http://learn.siteleaf.com"><img src="/uploads/badges.svg" alt="learn.siteleaf.com" /></a></p>
+
+<p>Last week we released the brand new <a href="/blog/v2">Siteleaf v2</a>, which is built on Jekyll and comes with tons of <a href="/features">new features</a> like GitHub sync.</p>
+
+<p>To help get everyone up to speed on v2, we’re excited to officially launch our new help site <a href="http://learn.siteleaf.com">learn.siteleaf.com</a>.</p>
+
+<p>Learn about <a href="http://learn.siteleaf.com/themes/">Developing Themes</a>, <a href="http://learn.siteleaf.com/content/">Managing Content</a>, using the <a href="http://learn.siteleaf.com/api/">API</a>, how to migrate your <a href="http://learn.siteleaf.com/v1/">Legacy Site</a>, and more!</p>
+
+<p>The help site itself is built on Siteleaf v2 (of course), and is <a href="https://github.com/siteleaf/learn.siteleaf.com">open source on GitHub</a>. We encourage your feedback and contributions.</p>
+
+<p><strong>Pro tip:</strong> You can even download a full copy of the repo (<a href="https://github.com/siteleaf/learn.siteleaf.com/archive/master.zip">ZIP</a>) for offline reference.</p>
+
+<p>Happy learning!</p>
+
+    
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/v2/">Say hello to Siteleaf v2</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-07T10:00:00-04:00">Jun 07, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/169542999?title=0&amp;byline=0&amp;portrait=0" width="680" height="383" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/169542999">Introducing Siteleaf v2</a> on Vimeo</p>
+
+<p>Nearly three years ago to the day, we launched the <a href="/blog/introducing-siteleaf/">first public version</a> of Siteleaf. We set out to create a new kind of content management system, one that marries the best parts of a static website generator (speed and simplicity) with a traditional CMS (power and collaboration). We dreamed of a tool that could be simple, without being dumbed down. One that values data portability, and is designed for a better web. As web developers ourselves, we wouldn’t have it any other way.</p>
+
+<p>Today marks a huge milestone towards this goal. We’re excited to announce Siteleaf v2 is now available, and with it comes compatibility with <a href="http://jekyllrb.com/">Jekyll</a>, the <a href="http://www.staticgen.com">most popular</a> open source static site generator. Everything you already love about Siteleaf is still here (and much improved), but we’ve traded our proprietary templating system for one that’s powering over <a href="https://github.com/blog/1992-eight-lessons-learned-hacking-on-github-pages-for-six-months">half a million websites</a> by GitHub alone. We feel pretty good about that.</p>
+
+<p>Those familiar with Siteleaf v1 will immediately feel at home with Jekyll. It’s the same HTML, Liquid, and Markdown goodness you already love, but with a bag of snazzy new tricks — including collections, nested metadata, custom permalinks, offline development, and more. Now, not only can you host your compiled site anywhere, you’re in control of your source data too.</p>
+
+<p>In addition, Siteleaf v2 now <a href="/features">syncs directly with GitHub</a> so you can bring your existing Jekyll sites over in one click — and just as easily move your site out. Every edit you or other authors make in Siteleaf is synced to GitHub, including content and theme changes. See a log of edits, who made them, and revert back to any state with the Git tools you already use. It’s a time machine for your content.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/v2/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+<div class="blog__buttonWrap">
+  <a href="/myBlog/blog/archive/" class="bg--gray blog__button">Older posts</a>
+</div>
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Image and video processing for your static site" />
+<meta name="description" content="Static sites can benefit from microservices just as much as any other type of site, especially when it comes to processing images and video." />
+<meta property="og:description" content="Static sites can benefit from microservices just as much as any other type of site, especially when it comes to processing images and video." />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/image-and-video-processing-for-your-static-site/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/image-and-video-processing-for-your-static-site/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta property="og:image" content="http://localhost:4000/myBlog/uploads/media-processing-diagram.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-07-17T10:16:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@quinn" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Image and video processing for your static site",
+"image": "http://localhost:4000/myBlog/uploads/media-processing-diagram.png",
+"datePublished": "2016-07-17T10:16:00-04:00",
+"description": "Static sites can benefit from microservices just as much as any other type of site, especially when it comes to processing images and video.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/image-and-video-processing-for-your-static-site/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <title>Image and video processing for your static site - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="post">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  <!-- blog permalink, inherit from first tag -->
+  
+  
+
+<div class="headerWrap bg--blue">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">Image and video processing for your static site</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+
+<article class="article">
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/aws/" class="article__tag__link">AWS</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-07-17T10:16:00-04:00">Jul 17, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>Static HTML sites are great — there’s no reliance on a server or database, you can host them for cheap, archive an entire copy on a USB drive, and when they’re properly optimized they can be blazing fast. Optimization can be tricky when it comes to static sites though. Since there’s no server processing and generating your pages, you don’t have the benefit of using something like <a href="http://www.imagemagick.org/">ImageMagick</a> alongside a gem like CarrierWave, which makes it easy to resize and optimize your images when they’re uploaded. The same goes for video. If you’re not hosting your video on YouTube or Vimeo, you’re responsible for transcoding the video into the various formats favored by the different browsers. So what’s a developer to do?</p>
+
+<h2 id="processing-as-a-service">Processing as a service</h2>
+
+<p>One option is to use a 3rd party. There’s been a handful of companies who have started offering image and video processing as a service. These services are a great option if you don’t want to maintain your own solution, are “on demand”, and make it really simple to get started. To name just a few:</p>
+
+<p><img src="/uploads/imgix-servers.jpeg" alt="imgix servers" /></p>
+
+<p><strong><a href="http://imgix.com/">imgix</a></strong> generates your images on demand. In your image URLs you specify parameters like the dimensions, filters, face detection and type of cropping. Once the image is generated, it’s cached and served via their CDN. imgix charges $3 per “1,000 master images accessed each month” and $0.08 per GB of bandwidth.</p>
+
+<p><strong><a href="http://cloudinary.com/">Cloudinary</a></strong> offers processing services for images and video and is a bit more robust than imgix. Cloudinary offers a limited free plan with the next step up being $44/month.</p>
+
+<p><strong><a href="http://embed.ly/">Embedly</a></strong>, like Cloudinary, offers processing options for both images and video. They offer a limited free plan with the next step up being $23/month for video and $9/month for images.</p>
+
+<p><strong><a href="https://www.filestack.com/">Filestack</a></strong> is another. In addition to processing images and video, they offer document transformations and URL screenshots. They offer a limited free plan with the next step up being $49/month.</p>
+
+<h2 id="rolling-your-own-solution-with-aws">Rolling your own solution with AWS</h2>
+
+<p>What if you don’t want to pay a premium to subscribe to another service to process and serve your media? Typically you don’t need all the whiz-bang options offered by 3rd party services and a straightforward approach is typically enough for simple sites. Static sites can benefit just as much from a microservices approach as any other type of site, and if you host your site on S3, AWS gives us all the tools we need to processes our own images and video for much cheaper, though with a bit more setup and expertise required from our end.</p>
+
+<p><img src="/uploads/media-processing-diagram.png" alt="media-processing-diagram.png" /></p>
+
+<h3 id="open-source-lambda-functions">Open source Lambda functions</h3>
+
+<p>What follows is a high-level overview of the AWS services you can use to build your own image and video processing pipeline. To dive into the code, view working examples and more in-depth documentation, you can <a href="https://github.com/sawyerh/lambda-asset-pipeline">view all the open source code on GitHub</a>.</p>
+
+<h3 id="s3-event-notifications">S3 Event Notifications</h3>
+
+<p>The main magic to all of this are <a href="https://docs.aws.amazon.com/en_us/console/s3/events">S3 event notifications</a>. With this you can trigger Lambda functions when new objects are published to your bucket. You can specify which directory (using the Prefix field) and which file extensions to watch for (using the Suffix field). For example, you could set up an event notification to trigger a Lambda function when any object ending with <code class="highlighter-rouge">jpg</code> is added to the <code class="highlighter-rouge">original/</code> directory.</p>
+
+<p><img src="/uploads/s3-event-notification.png" alt="s3-event-notification.png" /></p>
+
+<h3 id="lambda">Lambda</h3>
+
+<p><a href="https://aws.amazon.com/lambda/">Lambda</a> is where we place the code that manages our processing logic. When a new object is added to our S3 bucket, S3 sends an event to our Lambda function with information about the object. Here’s a sample event, the only parts we care about are the object’s key and bucket name:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"Records"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"eventVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"eventTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestParameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"sourceIPAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"s3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"configurationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testConfigRule"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"eTag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0123456789abcdef0123456789abcdef"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"sequencer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0A1B2C3D4E5F678901"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HappyFace.jpg"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"arn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:s3:::mybucket"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sourcebucket"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"ownerIdentity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"principalId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXAMPLE"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"s3SchemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"responseElements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"x-amz-id-2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXAMPLE123/5678abcdefghijklambdaisawesome/mnopqrstuvwxyzABCDEFGH"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"x-amz-request-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXAMPLE123456789"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"awsRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us-east-1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"eventName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObjectCreated:Put"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"userIdentity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"principalId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXAMPLE"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"eventSource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aws:s3"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>ImageMagick is provided in the Lambda environment without any installation required on our part, and we can use this to resize and process our images. The AWS SDK is also provided by default and we can use it to save our processed images back to S3 or to trigger an Elastic Transcoder job which handles our video processing.</p>
+
+<h3 id="elastic-transcoder">Elastic Transcoder</h3>
+
+<p><a href="https://aws.amazon.com/elastictranscoder/">Elastic Transcoder</a> transcodes videos from one format to another to be playable on various devices and browsers. For example, you could use it to convert MP4 files to WebM. AWS Lambda can create an Elastic Transcoder job for each new video object that its been notified about. In Elastic Trancoder you create a “pipeline” which specifies the input and output buckets for your media files. Optionally, you can also create a “preset” which specifies the output format, dimensions, and thumbnail options. In most cases you can just use one of the standard presets AWS provides.</p>
+
+<h3 id="build-your-own">Build your own</h3>
+
+<p>The above was just a high-level overview of the AWS services you can use to build your own media processing pipeline. Hopefully you now have a decent mental model of how theses pieces fit together. If you’d like to learn more, head over to GitHub to view some open source Lambda functions which you can use to get started with your own media processing setup: <a href="https://github.com/sawyerh/lambda-asset-pipeline">github.com/sawyerh/lambda-asset-pipeline</a></p>
+
+    
+    
+  </section>
+</article>
+
+
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>

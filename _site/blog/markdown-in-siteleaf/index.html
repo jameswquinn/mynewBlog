@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Markdown in Siteleaf" />
+<meta name="description" content="In the last Siteleaf post, we explored taxonomy and the many ways you could use it to extend your website. This time, we’ll break from templating and take a closer look at content—specifically, Markdown’s role in Siteleaf. Markdown If you develop for the web and haven’t heard of Markdown yet, I’m going to have to ask you to leave. As described by its originator, John Gruber, “Markdown is a text-to-HTML conversion tool for web writers.” With it, we can write a blog post, like this one, and style it without touching HTML. Instead of typing &lt;strong&gt;bold&lt;/strong&gt; for a selection of text we’d like to bold, we can type **bold** and use a Markdown engine to produce the proper HTML syntax. This allows for more legible text when writing, so we don’t lose track of the actual words. Along with styling, we can also use Markdown for more complex elements, like links: [alt text](http://mylink.com), and images: ![alt text](/myimage.jpg). Under the hood, Siteleaf uses Redcarpet, a widely-adopted Markdown engine, and SmartyPants, a plugin for automatic smart quotes and other fancy characters. With these libraries, we get a few extra shortcuts for free, like em dashes: ---, ellipsis: ..., and tables: | First name | Last name | Age | | ---------- | ----------- | --- | | Jonnie | Hallman | 26 | | Larry | Fox | 15 | | Sawyer | Hollenshead | 14 | With the support of Markdown, Siteleaf posts can follow our guiding principle—all content should outlive its CMS. No matter where you manage your website, you should be able to take your content with you, free from any ties to the previous system." />
+<meta property="og:description" content="In the last Siteleaf post, we explored taxonomy and the many ways you could use it to extend your website. This time, we’ll break from templating and take a closer look at content—specifically, Markdown’s role in Siteleaf. Markdown If you develop for the web and haven’t heard of Markdown yet, I’m going to have to ask you to leave. As described by its originator, John Gruber, “Markdown is a text-to-HTML conversion tool for web writers.” With it, we can write a blog post, like this one, and style it without touching HTML. Instead of typing &lt;strong&gt;bold&lt;/strong&gt; for a selection of text we’d like to bold, we can type **bold** and use a Markdown engine to produce the proper HTML syntax. This allows for more legible text when writing, so we don’t lose track of the actual words. Along with styling, we can also use Markdown for more complex elements, like links: [alt text](http://mylink.com), and images: ![alt text](/myimage.jpg). Under the hood, Siteleaf uses Redcarpet, a widely-adopted Markdown engine, and SmartyPants, a plugin for automatic smart quotes and other fancy characters. With these libraries, we get a few extra shortcuts for free, like em dashes: ---, ellipsis: ..., and tables: | First name | Last name | Age | | ---------- | ----------- | --- | | Jonnie | Hallman | 26 | | Larry | Fox | 15 | | Sawyer | Hollenshead | 14 | With the support of Markdown, Siteleaf posts can follow our guiding principle—all content should outlive its CMS. No matter where you manage your website, you should be able to take your content with you, free from any ties to the previous system." />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/markdown-in-siteleaf/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/markdown-in-siteleaf/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-07-29T11:01:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@quinn" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Markdown in Siteleaf",
+"datePublished": "2013-07-29T11:01:00-04:00",
+"description": "In the last Siteleaf post, we explored taxonomy and the many ways you could use it to extend your website. This time, we’ll break from templating and take a closer look at content—specifically, Markdown’s role in Siteleaf. Markdown If you develop for the web and haven’t heard of Markdown yet, I’m going to have to ask you to leave. As described by its originator, John Gruber, “Markdown is a text-to-HTML conversion tool for web writers.” With it, we can write a blog post, like this one, and style it without touching HTML. Instead of typing &lt;strong&gt;bold&lt;/strong&gt; for a selection of text we’d like to bold, we can type **bold** and use a Markdown engine to produce the proper HTML syntax. This allows for more legible text when writing, so we don’t lose track of the actual words. Along with styling, we can also use Markdown for more complex elements, like links: [alt text](http://mylink.com), and images: ![alt text](/myimage.jpg). Under the hood, Siteleaf uses Redcarpet, a widely-adopted Markdown engine, and SmartyPants, a plugin for automatic smart quotes and other fancy characters. With these libraries, we get a few extra shortcuts for free, like em dashes: ---, ellipsis: ..., and tables: | First name | Last name | Age | | ---------- | ----------- | --- | | Jonnie | Hallman | 26 | | Larry | Fox | 15 | | Sawyer | Hollenshead | 14 | With the support of Markdown, Siteleaf posts can follow our guiding principle—all content should outlive its CMS. No matter where you manage your website, you should be able to take your content with you, free from any ties to the previous system.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/markdown-in-siteleaf/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="twitter:image" content="http://localhost:4000/assets/avatar.png"/>
+    <title>Markdown in Siteleaf - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="post">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  <!-- blog permalink, inherit from first tag -->
+  
+  
+
+<div class="headerWrap bg--blue">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">Markdown in Siteleaf</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+
+<article class="article">
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/markdown/" class="article__tag__link">Markdown</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-29T11:01:00-04:00">Jul 29, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/markdown-in-siteleaf/"><img src="/myBlog/uploads/markdown-in-siteleaf-ui.png" alt="/myBlogMarkdown in Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>In the last <a href="http://siteleaf.com">Siteleaf</a> post, we explored <a href="/blog/taxonomy-in-siteleaf">taxonomy</a> and the many ways you could use it to extend your website. This time, we’ll break from templating and take a closer look at content—specifically, Markdown’s role in Siteleaf.</p>
+
+<h3 id="markdown">Markdown</h3>
+
+<p>If you develop for the web and haven’t heard of <a href="http://daringfireball.net/projects/markdown/">Markdown</a> yet, I’m going to have to ask you to leave. As described by its originator, <a href="http://daringfireball.net">John Gruber</a>, “Markdown is a text-to-HTML conversion tool for web writers.” With it, we can write a blog post, like this one, and style it without touching HTML. Instead of typing <code class="highlighter-rouge">&lt;strong&gt;bold&lt;/strong&gt;</code> for a selection of text we’d like to bold, we can type <code class="highlighter-rouge">**bold**</code> and use a Markdown engine to produce the proper HTML syntax. This allows for more legible text when writing, so we don’t lose track of the actual words.</p>
+
+<p>Along with styling, we can also use Markdown for more complex elements, like links: <code class="highlighter-rouge">[alt text](http://mylink.com)</code>, and images: <code class="highlighter-rouge">![alt text](/myimage.jpg)</code>. Under the hood, Siteleaf uses <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, a widely-adopted Markdown engine, and <a href="http://daringfireball.net/projects/smartypants/">SmartyPants</a>, a plugin for automatic smart quotes and other fancy characters. With these libraries, we get a few extra shortcuts for free, like em dashes: <code class="highlighter-rouge">---</code>, ellipsis: <code class="highlighter-rouge">...</code>, and tables:</p>
+
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code>| First name | Last name   | Age |
+| ---------- | ----------- | --- |
+| Jonnie     | Hallman     | 26  |
+| Larry      | Fox         | 15  |
+| Sawyer     | Hollenshead | 14  |
+</code></pre>
+</div>
+
+<p>With the support of Markdown, Siteleaf posts can follow our guiding principle—all content should outlive its CMS. No matter where you manage your website, you should be able to take your content with you, free from any ties to the previous system.</p>
+
+<h3 id="the-editor">The editor</h3>
+
+<p><img src="/uploads/markdown-in-siteleaf-editor-text.jpg" alt="editor-text" /></p>
+
+<p>So, how does Markdown fit into Siteleaf on the front-end? For starters, Siteleaf renders all body text using Markdown by default. Gone are the days of the WYSIWYG editor, with its stored HTML and toolbar of endless icons. Siteleaf’s editor is built on <a href="http://ace.c9.io/">Ace</a>, so we can see proper Markdown highlighting, and the editor behaves like a real text editor—tabs actually work as expected. It does have a few icons for the mouse-dependent folk, but reduced down to the greatest hits—<em>bold</em>, <em>insert link</em>, and <em>insert image</em>. To the left of the icons is a link for easily referencing the Markdown syntax.</p>
+
+<p><img src="/uploads/markdown-in-siteleaf-reference.jpg" alt="reference" /></p>
+
+<p>Clicking the link prompts a modal, so you can see how to insert an image without scrubbing through Gruber’s 2004 documentation. With Siteleaf, however, you should never find yourself looking for the image syntax because it handles this for you.</p>
+
+<h3 id="image-handling">Image handling</h3>
+
+<p>In <a href="http://jekyllrb.com">Jekyll</a>, I always dreaded adding images to posts because the process was so labor-intensive. Even though I wrote scripts to alleviate some of the pain, I still needed to write the entire path to the image. Luckily, Siteleaf takes care of this for us.</p>
+
+<p><img src="/uploads/markdown-in-siteleaf-drag-image.jpg" alt="drag-image" /></p>
+
+<p>When using the <em>insert image</em> icon to upload a photo, Siteleaf will automatically paste the Markdown code to the location of your cursor in the editor. In addition, you can drag any of your existing assets to the text editor and Siteleaf will insert the image’s code. This seems like such an easy and obvious feature, but knowing life without it makes me appreciate it even more.</p>
+
+<p><img src="/uploads/markdown-in-siteleaf-hover-image.jpg" alt="hover-image" /></p>
+
+<p>Without a WYSIWYG editor, images are sometimes difficult to visualize unless you preview the entire page or provide a descriptive filename. Because of this, we built <em>image preview on hover</em> into Siteleaf’s editor. If you need to reference an image, simply mouse over its URL and a thumbnail will appear. We sacrificed an intern to a coven of witches in return for this feature.</p>
+
+<h3 id="write-locally">Write locally</h3>
+
+<p><img src="/uploads/markdown-in-siteleaf-iawriter.jpg" alt="iawriter" /></p>
+
+<p>Because Siteleaf loves Markdown so much, it doesn’t care where you write your posts. If you prefer writing deep in the woods, using the ever popular <a href="http://www.iawriter.com/mac/">iA Writer</a> as your weapon of choice, feel free. You should be able to write in whatever environment you feel most comfortable.</p>
+
+<p><img src="/uploads/markdown-in-siteleaf-drag-file.png" alt="drag-file" /></p>
+
+<p>When you’re ready to publish, simply drag and drop the Markdown file to Siteleaf’s editor. Siteleaf will insert the file’s contents into the editor and you’re good to go. If you’re feeling l33t and want to automate this workflow, you could write a script using the <a href="https://github.com/siteleaf/siteleaf-api/">Siteleaf API</a> to update a post’s contents upon saving a file locally.</p>
+
+<h3 id="wrapping-up">Wrapping up</h3>
+
+<p>It’s safe to say that Markdown is a proven markup language for writing on the web. I might go as far as to consider Markdown a safer, more future-ready writing format than HTML. We placed our bets by integrating it heavily into Siteleaf, believing that its simplicity and light weight go hand-in-hand with our UI. Do you have the itch to write?—try using Siteleaf with Markdown and <a href="http://twitter.com/siteleaf">let me know</a> what you think.</p>
+
+    
+    
+  </section>
+</article>
+
+
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>
