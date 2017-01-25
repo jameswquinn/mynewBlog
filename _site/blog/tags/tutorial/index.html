@@ -1,1 +1,3824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Tutorial" />
+<meta name="description" content="" />
+<meta property="og:description" content="" />
+<link rel="canonical" href="http://localhost:4000/myBlog/blog/tags/tutorial/" />
+<meta property="og:url" content="http://localhost:4000/myBlog/blog/tags/tutorial/" />
+<meta property="og:site_name" content="Siteleaf" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@siteleaf" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "WebPage",
+"headline": "Tutorial",
+"description": "",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/myBlog/assets/logo.svg"}},
+"url": "http://localhost:4000/myBlog/blog/tags/tutorial/"}</script>
+<!-- End Jekyll SEO tag -->
 
+    <meta name="twitter:image" content="http://localhost:4000/assets/avatar.png"/>
+    <title>Tutorial - Siteleaf</title>
+    <link rel="stylesheet" href="/myBlog/styles/milligram.css" />
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.4/milligram.min.css" />
+    -->
+    <link rel="icon" type="image/x-icon" href="/myBlog/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Siteleaf: Blog (RSS)" href="http://localhost:4000/myBlogfeed.xml" />
+  </head>
+  <body class="tag">
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1666437-33', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    <div class="container">
+      
+  
+
+<div class="headerWrap bg--blue">
+  <header class="header">
+    <ul class="header__items">
+      
+      <li class="header__item">
+        <a href="/myBlog/blog/" class="header__link">Blog</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/gallery/" class="header__link">Gallery</a>
+      </li>
+      
+      <li class="header__item">
+        <a href="/myBlog/plans/" class="header__link">Plans</a>
+      </li>
+      
+    </ul>
+    <a href="/myBlog/" class="header__home"><img src="/myBlog/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <h1 class="header__title">Tutorial</h1>
+    
+    
+  </header>
+</div>
+
+        
+      
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jamstack-ecommerce/">JAMstack e-commerce with Siteleaf & Snipcart</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link bg--dark-gray">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-25T10:00:00-04:00">Oct 25, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p><img src="/uploads/jamstack-ecommerce.png" alt="" /></p>
+
+<p><em>This is a guest post by Charles Ouellet, co-founder of <a href="https://snipcart.com/">Snipcart</a>.</em></p>
+
+<p>If you’re reading this blog, you know static web development is trendy, to say the least. Unless you just got out of a years-long meditation retreat in a cave with no Internet. If that’s your case, well, hum, welcome back!</p>
+
+<p>At Snipcart, our developer-first shopping cart platform, we’ve been diving into static site generators and related tools for 2+ years now. And we believe <a href="https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/">they are the next big thing</a>.</p>
+
+<p>A short while ago, a friend of ours gave an <a href="https://vimeo.com/163522126">in-depth conference on why “static” is a bad word</a> for the modern front-end stack, aka the <strong>JAMstack</strong> (JavaScript, APIs, &amp; Markup).</p>
+
+<p>And he’s right:</p>
+
+<p><img src="/uploads/jamstack-ecommerce-static-definition.png" alt="Static definition" /></p>
+
+<p>There’s nothing “undesirable” or “uninteresting” about the modern static websites &amp; apps developers are pushing online. It’s in fact quite the opposite.</p>
+
+<p>As a community, we need to give this new paradigm a name worthy of its actual value, and that’s exactly what the <strong><a href="http://jamstack.org/">JAMstack</a></strong> is.</p>
+
+<p>But this post isn’t a philosophical essay on the benefits of the API economy and the modular development approach. It’s about putting together a killer e-commerce workflow that ticks all of the boxes on the JAMstack checklist:</p>
+
+<ul>
+  <li>Entire site on a CDN</li>
+  <li>Atomic deploys</li>
+  <li>Instant cache invalidation</li>
+  <li>Everything lives in Git</li>
+  <li>Automated builds</li>
+</ul>
+
+<p>So today, I’m going to show you how to build an <strong>API-centric, fast and secure e-commerce project</strong> in 5 simple steps. And I’m going to use the right JAMstack tools to do so.</p>
+
+<p>Let’s do it!</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jamstack-ecommerce/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/">Creating tag pages with Jekyll and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-21T12:13:00-04:00">Oct 21, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>In this tutorial, we show you approaches for creating tag pages in Jekyll and Siteleaf.</p>
+
+<p class="note">This is part two of a tutorial series on Jekyll and Siteleaf. Check out part one on <a href="/blog/author-pages-in-jekyll-and-siteleaf/">author pages</a>.</p>
+
+<h2 id="the-plugin-approach">The plugin approach</h2>
+
+<p>If you plan to use more than a dozen or so tags, a <a href="https://jekyllrb.com/docs/plugins/">plugin</a> can save you from having to create individual documents for each. This approach lets authors and content managers easily create new tags on the fly, while having autocomplete available in the Siteleaf UI.</p>
+
+<p><img src="/uploads/tags-select.gif" alt="" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/tag-pages-in-jekyll-and-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/author-pages-in-jekyll-and-siteleaf/">Creating author pages with Jekyll and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-10-20T14:13:00-04:00">Oct 20, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>At Oak, we recently launched a new website for our friends at <a href="http://www.collaborativefund.com/">Collaborative Fund</a>, built on Siteleaf. The site features a <a href="http://www.collaborativefund.com/blog/">blog</a> for their prolific content, including <a href="http://www.collaborativefund.com/blog/authors/morgan/">author</a> and <a href="http://www.collaborativefund.com/blog/tags/featured/">tag</a> pages.</p>
+
+<p>In this tutorial, we show you how to set up your Jekyll blog with author pages and leverage Siteleaf to maintain your content.</p>
+
+<p class="tip">The approach we use in this tutorial can be easily adapted to other sets of content as well, not just authors. It also is plugin-less, which means it can be readily published to GitHub Pages on Siteleaf’s free Developer plan.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/author-pages-in-jekyll-and-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/customizing-the-siteleaf-admin/">Customizing the Siteleaf admin</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link bg--dark-gray">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link bg--darkest-gray">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-08-04T14:30:00-04:00">Aug 04, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/177560478?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/177560478">Customizing the Siteleaf admin</a> on Vimeo</p>
+
+<p>Siteleaf v2 was built to be be customized. In this tutorial, we’ll dive deeper into the Siteleaf admin and learn some tricks on how to tweak the interface to suit our needs. We’ll cover collections, permalinks, metadata, smart fields, defaults, and user roles.</p>
+
+<p>If you followed the previous tutorials, you should now have a <a href="/blog/jekyll-from-scratch/">basic understanding of Jekyll</a> and the <a href="/blog/connecting-github/">Siteleaf admin</a>. Feel free to check those out first if you haven’t.</p>
+
+<p>Watch the video above, or follow along with the text version below.</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>By default, you should have 2 content areas: <strong>Pages</strong> and <strong>Posts</strong>.</p>
+
+<p>Pages is your home for standalone content like your about page, contact, FAQ, and so on. Pages can be drag and drop ordered, and nested using the move icon next to each page.</p>
+
+<p>Posts is a default Jekyll <a href="http://learn.siteleaf.com/content/collections/">collection</a> that’s blog-aware, so each piece of content here (called <a href="http://learn.siteleaf.com/content/documents/">documents</a>) is stamped with a date, and generally shown in date-descending order.</p>
+
+<p>The Posts collection also comes with some special features: <strong>drafts</strong>, <strong>tags</strong>, and <strong>categories</strong>.</p>
+
+<p>If these features are useful to you, but the name “Posts” isn’t quite doing it for you, you’re welcome to rename this collection under <strong>Collection settings</strong>.  For example, I might want to call mine “Stories” instead.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/customizing-the-siteleaf-admin/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/image-and-video-processing-for-your-static-site/">Image and video processing for your static site</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/aws/" class="article__tag__link bg--yellow">AWS</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-07-17T10:16:00-04:00">Jul 17, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>Static HTML sites are great — there’s no reliance on a server or database, you can host them for cheap, archive an entire copy on a USB drive, and when they’re properly optimized they can be blazing fast. Optimization can be tricky when it comes to static sites though. Since there’s no server processing and generating your pages, you don’t have the benefit of using something like <a href="http://www.imagemagick.org/">ImageMagick</a> alongside a gem like CarrierWave, which makes it easy to resize and optimize your images when they’re uploaded. The same goes for video. If you’re not hosting your video on YouTube or Vimeo, you’re responsible for transcoding the video into the various formats favored by the different browsers. So what’s a developer to do?</p>
+
+<h2 id="processing-as-a-service">Processing as a service</h2>
+
+<p>One option is to use a 3rd party. There’s been a handful of companies who have started offering image and video processing as a service. These services are a great option if you don’t want to maintain your own solution, are “on demand”, and make it really simple to get started. To name just a few:</p>
+
+<p><img src="/uploads/imgix-servers.jpeg" alt="imgix servers" /></p>
+
+<p><strong><a href="http://imgix.com/">imgix</a></strong> generates your images on demand. In your image URLs you specify parameters like the dimensions, filters, face detection and type of cropping. Once the image is generated, it’s cached and served via their CDN. imgix charges $3 per “1,000 master images accessed each month” and $0.08 per GB of bandwidth.</p>
+
+<p><strong><a href="http://cloudinary.com/">Cloudinary</a></strong> offers processing services for images and video and is a bit more robust than imgix. Cloudinary offers a limited free plan with the next step up being $44/month.</p>
+
+<p><strong><a href="http://embed.ly/">Embedly</a></strong>, like Cloudinary, offers processing options for both images and video. They offer a limited free plan with the next step up being $23/month for video and $9/month for images.</p>
+
+<p><strong><a href="https://www.filestack.com/">Filestack</a></strong> is another. In addition to processing images and video, they offer document transformations and URL screenshots. They offer a limited free plan with the next step up being $49/month.</p>
+
+<h2 id="rolling-your-own-solution-with-aws">Rolling your own solution with AWS</h2>
+
+<p>What if you don’t want to pay a premium to subscribe to another service to process and serve your media? Typically you don’t need all the whiz-bang options offered by 3rd party services and a straightforward approach is typically enough for simple sites. Static sites can benefit just as much from a microservices approach as any other type of site, and if you host your site on S3, AWS gives us all the tools we need to processes our own images and video for much cheaper, though with a bit more setup and expertise required from our end.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/image-and-video-processing-for-your-static-site/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/connecting-github/">Connecting GitHub and Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link bg--dark-gray">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link bg--darkest-gray">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-24T13:00:00-04:00">Jun 24, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/171941124?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/171941124">Connecting GitHub and Siteleaf</a> on Vimeo</p>
+
+<p>This tutorial will show you how to connect and sync an existing Jekyll site from GitHub to Siteleaf, so you can edit content and preview your site in the cloud.</p>
+
+<p>If you are new to Jekyll, you may want to start with our <a href="/blog/jekyll-from-scratch/">Jekyll from Scratch</a> first tutorial to catch up on the basics.</p>
+
+<h2 id="what-is-github-sync">What is GitHub sync?</h2>
+
+<p>When developing your site, you’ll generally want to keep your theme and content in sync so you can see how everything looks in context.</p>
+
+<p>By enabling GitHub sync, any changes you make in your Git repo will be immediately saved to Siteleaf, and vice versa. So any edit you or anyone on your team makes in Siteleaf is synced and backed up. You can see a log of all changes in GitHub, and revert to any state in case anyone makes a mistake.</p>
+
+<p>We like to think of it as a time machine for your content.</p>
+
+<p><img src="/uploads/home__develop--github.jpg" alt="" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/connecting-github/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/jekyll-from-scratch/">Jekyll from scratch</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/jekyll/" class="article__tag__link bg--red">Jekyll</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/github/" class="article__tag__link bg--dark-gray">GitHub</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link bg--darkest-gray">Video</a></li>
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2016-06-14T13:00:00-04:00">Jun 14, 2016</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <iframe src="https://player.vimeo.com/video/170526921?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p class="caption">Watch <a href="https://vimeo.com/170526921">Jekyll from Scratch</a> on Vimeo</p>
+
+<p class="warning">This tutorial was created using Jekyll version 3.1.6. Newer versions (3.2+) will give you a theme by default instead of <code class="highlighter-rouge">_layouts</code> and <code class="highlighter-rouge">_includes</code>. For the purpose of this tutorial you may want to downgrade to Jekyll 3.1.6 (to remove other versions, run <code class="highlighter-rouge">gem uninstall jekyll</code>). Stay tuned for a future tutorial on themes!</p>
+
+<p>In this tutorial, we’ll show you how to get set up and develop websites locally using <a href="http://jekyllrb.com">Jekyll</a>. We’ll cover installation, creating a new site, file structure, and finally we’ll commit the new site to GitHub.</p>
+
+<p>This will give you a functional website that you can edit offline. Also make sure to check out the <a href="/blog/connecting-github">next tutorial</a> where we’ll connect our site to the new <a href="/blog/v2">Siteleaf v2</a> so we can edit content in the cloud.</p>
+
+<h2 id="what-is-jekyll">What is Jekyll?</h2>
+
+<p>Jekyll is a static website generator built on Ruby. It takes <a href="https://daringfireball.net/projects/markdown/">Markdown text</a> (your site’s content) and <a href="https://shopify.github.io/liquid/">Liquid templates</a> (your site’s theme) and outputs simple HTML that can be hosted pretty much anywhere.</p>
+
+<p>It’s also what powers <a href="https://pages.github.com">GitHub Pages</a>, which serves more than <a href="https://github.com/blog/1992-eight-lessons-learned-hacking-on-github-pages-for-six-months">half a million websites</a>.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To get started, we are going to install Jekyll, which is available to download as a Ruby gem. We’ll be following the quick-start instructions on <a href="http://jekyllrb.com">Jekyll’s website</a>.</p>
+
+<p>So let’s open the trusty command line.</p>
+
+<p>First, you’ll want to make sure you are running a recent version of Ruby. You can confirm by running the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ruby -v
+</code></pre>
+</div>
+
+<p>The <a href="https://www.ruby-lang.org/en/downloads/">latest stable</a> version is 2.3.1, but anything above 2.2 should be fine. If you need to upgrade, we recommend using something like <a href="http://rbenv.org">rbenv</a> to make it easy.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/jekyll-from-scratch/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/publishing-via-the-api/">Publishing via the API</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/announcement/" class="article__tag__link bg--green">Announcement</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2015-06-24T11:10:00-04:00">Jun 24, 2015</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+
+    
+      <p>For the last week publishing in the Siteleaf interface has been powered by our API. This has been a requested feature by some of our users and ourselves. Its behavior is bit different than some of our other API endpoints, so let’s go over it.</p>
+
+<p>To initiate a publish, make an authenticated <code class="highlighter-rouge">POST</code> request to the <code class="highlighter-rouge">/sites/:id/publish</code> endpoint.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -u <span class="s2">"</span><span class="nv">$API_KEY</span><span class="s2">:</span><span class="nv">$API_SECRET</span><span class="s2">"</span> -X POST <span class="se">\</span>
+  http://api.siteleaf.com/v1/sites/<span class="nv">$SITE_ID</span>/publish
+
+<span class="o">{</span><span class="s2">"job_id"</span>:<span class="s2">"e79af12c79ccd8866902d3dd"</span><span class="o">}</span> 
+</code></pre>
+</div>
+
+<p>This triggers a publish and immediately returns a job ID (or returns an already running job ID if one exists). You can stop here if you’d like and Siteleaf will happily chug away in the background.</p>
+
+<p>But the fun doesn’t stop there. You can optionally check in on publish progress using your <code class="highlighter-rouge">job_id</code> from above by making an authenticated <code class="highlighter-rouge">GET</code> request to the new <code class="highlighter-rouge">/jobs/:id</code> endpoint.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/publishing-via-the-api/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/advanced-liquid-group-by/">Advanced Liquid: Group By</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2015-04-09T16:30:00-04:00">Apr 09, 2015</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/advanced-liquid-group-by/"><img src="/myBlog/uploads/group_by.svg" alt="/myBlogAdvanced Liquid: Group By" /></a>
+    </p>
+    
+
+    
+      <p>Following <a href="/blog/advanced-liquid-sort/"><code class="highlighter-rouge">sort</code></a> and <a href="/blog/advanced-liquid-where/"><code class="highlighter-rouge">where</code></a>, this <a href="/blog/tags/liquid">Advanced Liquid</a> post introduces another handy new filter to Siteleaf: <code class="highlighter-rouge">group_by</code>.</p>
+
+<p>As the name suggests, this filter allows you to group your content by a certain property.</p>
+
+<p>For example, here’s how we could group all posts by year published:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">posts_by_year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">group_by</span><span class="p">:</span><span class="s2">"year"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>You can group by <a href="http://v1.siteleaf.com/help/themes/variables/content/">any property</a> like date, title, slug, even metadata and taxonomy. Here are a few real-world examples you may want to apply to your theme.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/advanced-liquid-group-by/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/advanced-liquid-where/">Advanced Liquid: Where</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2015-04-08T15:25:00-04:00">Apr 08, 2015</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/advanced-liquid-where/"><img src="/myBlog/uploads/where.svg" alt="/myBlogAdvanced Liquid: Where" /></a>
+    </p>
+    
+
+    
+      <p>Now that you are <a href="/blog/advanced-liquid-sort/">sorting</a> like a pro, we’ll move on to another new and exciting Liquid filter: <code class="highlighter-rouge">where</code>.</p>
+
+<p>Where allows us to find content based on a parameter. If you are coming from Jekyll, you’ll be happy to know it follows the same syntax.</p>
+
+<p>For example, here’s how we could find all pages titled “Foo”:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">foo_pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">where</span><span class="p">:</span><span class="s2">"title"</span><span class="p">,</span><span class="s2">"Foo"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>As with <code class="highlighter-rouge">sort</code>, you can use <a href="http://v1.siteleaf.com/help/themes/variables/content/">any property</a> like date, title, slug, even metadata and taxonomy. Below are few real-world examples you might find useful.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/advanced-liquid-where/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/advanced-liquid-sort/">Advanced Liquid: Sort</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2015-04-07T10:00:00-04:00">Apr 07, 2015</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/advanced-liquid-sort/"><img src="/myBlog/uploads/sort.svg" alt="/myBlogAdvanced Liquid: Sort" /></a>
+    </p>
+    
+
+    
+      <p><a href="http://v1.siteleaf.com/help/themes/getting-started/">Liquid</a> is the flexible templating language that powers themes on Siteleaf. While simple at first glance, there’s a lot of power under the hood for those wanting a greater level of control. In this new blog series, we’ll dive deeper and take a look at some advanced Liquid code and examples.</p>
+
+<p>First up in this post, we’ll take a look at the <code class="highlighter-rouge">sort</code> <a href="http://v1.siteleaf.com/help/themes/filters-and-tags">filter</a>.</p>
+
+<p>With any site, Siteleaf makes some general assumptions about your content. For example, posts are sorted by date (newest post shows first) and pages are sorted manually. In cases where this doesn’t fit your design, you can utilize the <code class="highlighter-rouge">sort</code> filter to order content any way you wish.</p>
+
+<p>For example, here’s how we might sort pages by date:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="p">:</span><span class="s2">"date"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>This will sort in ascending order, but we could also choose descending order by adding <code class="highlighter-rouge">reverse</code>:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="p">:</span><span class="s2">"date"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">reverse</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>You can sort on <a href="http://v1.siteleaf.com/help/themes/variables/content/">any property</a> like date, title, slug, even metadata and taxonomy. Below are few real-world examples you might find useful.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/advanced-liquid-sort/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/using-aws-s3-and-route-53/">Using AWS S3 and Route 53</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/aws/" class="article__tag__link bg--yellow">AWS</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2015-03-25T15:55:00-04:00">Mar 25, 2015</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+
+    
+
+    
+      <p>After building Siteleaf we took it upon ourselves to each rebuild our site using the service. I had previously used S3 with Jeykll and wanted to continue using it, but getting set up can be a bit of a mystery.</p>
+
+<p><em>I’m assuming that you’re using Route 53 for DNS, and want to serve content from the root domain while having www redirect to it.</em></p>
+
+<h3 id="amazon-s3">Amazon S3</h3>
+
+<p>Head to your <a href="https://console.aws.amazon.com/s3">S3 Console</a> where you’ll make one bucket named after your root domain, and another with the www subdomain (e.g. example.com and www.example.com). Take note of the region you choose.</p>
+
+<p><img src="/uploads/s3-1.gif" alt="s3-1" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/using-aws-s3-and-route-53/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/layouts-in-siteleaf/">Layouts in Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-10-29T10:42:00-04:00">Oct 29, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/layouts-in-siteleaf/"><img src="/myBlog/uploads/layouts-in-siteleaf.svg" alt="/myBlogLayouts in Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>In my last article about <a href="http://siteleaf.com">Siteleaf</a>, I wrote about what goes into <a href="/blog/porting-a-theme-to-siteleaf/">porting a theme</a> to Siteleaf from another CMS. This time around, I’ll show you how to write cleaner, less redundant templates through the use of layouts.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/layouts-in-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/porting-a-theme-to-siteleaf/">Porting a theme to Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-09-16T11:05:00-04:00">Sep 16, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/porting-a-theme-to-siteleaf/"><img src="/myBlog/uploads/porting-a-theme-to-siteleaf-martin.png" alt="/myBlogPorting a theme to Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>Today, I ported <a href="http://martin.siteleaf.net">another theme</a> to <a href="http://siteleaf.com">Siteleaf</a>—<a href="http://twitter.com/house">Allison House’s</a> <a href="http://house.github.io/martin/">Martin theme</a>. I started porting themes to Siteleaf earlier this month as a self-imposed challenge. A friend of mine asked if a particular theme was possible to implement using Siteleaf and rather than answer with a simple ‘yes’, I responded with <a href="http://balzac.siteleaf.net">the ported theme</a>. This was a great way of demonstrating Siteleaf’s adaptability, but also a useful exercise for myself to see where Siteleaf excels and where it falls short. In this post, I’ll walk through porting the Martin theme and show you just how easy it can be.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/porting-a-theme-to-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/markdown-in-siteleaf/">Markdown in Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/markdown/" class="article__tag__link bg--darker-gray">Markdown</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-29T11:01:00-04:00">Jul 29, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/markdown-in-siteleaf/"><img src="/myBlog/uploads/markdown-in-siteleaf-ui.png" alt="/myBlogMarkdown in Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>In the last <a href="http://siteleaf.com">Siteleaf</a> post, we explored <a href="/blog/taxonomy-in-siteleaf">taxonomy</a> and the many ways you could use it to extend your website. This time, we’ll break from templating and take a closer look at content—specifically, Markdown’s role in Siteleaf.</p>
+
+<h3 id="markdown">Markdown</h3>
+
+<p>If you develop for the web and haven’t heard of <a href="http://daringfireball.net/projects/markdown/">Markdown</a> yet, I’m going to have to ask you to leave. As described by its originator, <a href="http://daringfireball.net">John Gruber</a>, “Markdown is a text-to-HTML conversion tool for web writers.” With it, we can write a blog post, like this one, and style it without touching HTML. Instead of typing <code class="highlighter-rouge">&lt;strong&gt;bold&lt;/strong&gt;</code> for a selection of text we’d like to bold, we can type <code class="highlighter-rouge">**bold**</code> and use a Markdown engine to produce the proper HTML syntax. This allows for more legible text when writing, so we don’t lose track of the actual words.</p>
+
+<p>Along with styling, we can also use Markdown for more complex elements, like links: <code class="highlighter-rouge">[alt text](http://mylink.com)</code>, and images: <code class="highlighter-rouge">![alt text](/myimage.jpg)</code>. Under the hood, Siteleaf uses <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, a widely-adopted Markdown engine, and <a href="http://daringfireball.net/projects/smartypants/">SmartyPants</a>, a plugin for automatic smart quotes and other fancy characters. With these libraries, we get a few extra shortcuts for free, like em dashes: <code class="highlighter-rouge">---</code>, ellipsis: <code class="highlighter-rouge">...</code>, and tables:</p>
+
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code>| First name | Last name   | Age |
+| ---------- | ----------- | --- |
+| Jonnie     | Hallman     | 26  |
+| Larry      | Fox         | 15  |
+| Sawyer     | Hollenshead | 14  |
+</code></pre>
+</div>
+
+<p>With the support of Markdown, Siteleaf posts can follow our guiding principle—all content should outlive its CMS. No matter where you manage your website, you should be able to take your content with you, free from any ties to the previous system.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/markdown-in-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/taxonomy-in-siteleaf/">Taxonomy in Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-13T10:57:00-04:00">Jul 13, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/taxonomy-in-siteleaf/"><img src="/myBlog/uploads/taxonomy-in-siteleaf-ui.png" alt="/myBlogTaxonomy in Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>Last week, I wrote about <a href="/blog/metadata-in-siteleaf">metadata</a> in <a href="http://siteleaf.com">Siteleaf</a> and the variety of ways you could use it to customize your website. In this post, I’ll do the same, but with metadata’s much cooler, older brother—taxonomy.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/taxonomy-in-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/developing-sites/">Developing sites and themes</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link bg--darkest-gray">Video</a></li>
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-11T15:34:00-04:00">Jul 11, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <iframe src="https://player.vimeo.com/video/70121781?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreenn></iframe>
+    <p class="caption">Watch <a href="https://vimeo.com/70121781" target="_blank">Developing sites and themes</a> on Vimeo</p>
+    
+
+    
+      <p>In this video, we show you how to create Siteleaf themes using <a href="https://github.com/siteleaf/siteleaf-themes">Liquid</a> and develop sites locally using the <a href="https://github.com/siteleaf/siteleaf-gem">Siteleaf Ruby Gem</a> and <a href="http://pow.cx">Pow</a>/<a href="http://anvilformac.com">Anvil</a>.</p>
+
+<p>Watch this tutorial on <a href="http://vimeo.com/70121781">Vimeo</a>.</p>
+
+<p>Also see: <a href="/blog/getting-started">Getting started with Siteleaf</a></p>
+
+    
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/metadata-in-siteleaf/">Metadata in Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-07T10:51:00-04:00">Jul 07, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/metadata-in-siteleaf/"><img src="/myBlog/uploads/metadata-in-siteleaf-ui.png" alt="/myBlogMetadata in Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>In <a href="http://siteleaf.com">Siteleaf</a>, metadata is pure key/value data attached to a site, page, or post. It provides a way to interact with templates beyond the basic usage of injecting title or body copy. Metadata can be used to set inline CSS values or specify the number of posts on a given page—the uses are endless. It’s also very flexible, down to a per-entity level. A post could have a completely unique set of metadata compared to that of its siblings. Let’s look at a few examples.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/metadata-in-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/getting-started/">Getting started</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/video/" class="article__tag__link bg--darkest-gray">Video</a></li>
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-01T18:00:00-04:00">Jul 01, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <iframe src="https://player.vimeo.com/video/69294068?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreenn></iframe>
+    <p class="caption">Watch <a href="https://vimeo.com/69294068" target="_blank">Getting started</a> on Vimeo</p>
+    
+
+    
+      <p>In this video, we show you around the Siteleaf interface and create a simple website.</p>
+
+<p>Watch <a href="http://vimeo.com/69294068">Getting started with Siteleaf</a>.</p>
+
+    
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/hello-world-im-siteleaf/">Hello World, I’m Siteleaf</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-07-01T10:43:00-04:00">Jul 01, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/hello-world-im-siteleaf/"><img src="/myBlog/uploads/hello-world-im-siteleaf-create-site.png" alt="/myBlogHello World, I’m Siteleaf" /></a>
+    </p>
+    
+
+    
+      <p>Last week, <a href="/blog/overview">I ran through</a> a number of <a href="http://siteleaf.com">Siteleaf’s</a> most compelling features and provided a general overview of the service. This week, I’ll hold your hand through creating a basic website using Siteleaf.</p>
+
+
+    
+    
+      <a href="/myBlog/blog/hello-world-im-siteleaf/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+  
+
+<article class="article">
+  
+    <h2 class="article__title"><a href="/myBlog/blog/overview/">Siteleaf overview</a></h2>
+  
+  
+  <section class="article__meta">
+    
+      <ul class="article__tags">
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/tutorial/" class="article__tag__link bg--blue">Tutorial</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/liquid/" class="article__tag__link bg--red">Liquid</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+          
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+              <li class="article__tag"><a href="/myBlog/blog/tags/v1/" class="article__tag__link bg--dark-gray">v1</a></li>
+            
+          
+            
+            
+          
+        
+      </ul>
+    
+    
+    <time class="article__date" datetime="2013-06-22T13:00:00-04:00">Jun 22, 2013</time>
+    
+  </section>
+  
+  <section class="article__content">
+    
+      <p class="note">This post refers to a legacy version of Siteleaf.</p>
+    
+
+    
+    <p>
+      <a href="/myBlog/blog/overview/"><img src="/myBlog/uploads/an-introduction-to-siteleaf-collaboration.png" alt="/myBlogSiteleaf overview" /></a>
+    </p>
+    
+
+    
+      <p>Recently, we at <a href="http://oak.is">Oak</a> launched a new website publishing platform, called <a href="http://siteleaf.com">Siteleaf</a>. In short, Siteleaf lets you build your website locally, edit its content in the cloud, and publish to static. In between, it’s so much more. Let me tell you about it.</p>
+
+<h3 id="develop-locally">Develop locally</h3>
+
+<p>As the one who makes the websites, you undoubtedly have a dev environment you prefer. All your code is version-controlled, your snippets are award-worthy, and you are one with your text editor. With Siteleaf, there’s no online WYSIWYG editor forced upon you, so you can build your website in the comfort of your own IDE. Use the <a href="https://github.com/siteleaf/siteleaf-gem">Siteleaf gem</a> to preview your templates locally using the data from the live server. When you’re ready to go live, simply push the files with the gem or upload them using the website. You can even use <a href="http://pow.cx/">Pow</a> or <a href="http://anvilformac.com/">Anvil</a> to preview your sites with a proper hostname.</p>
+
+<p><img src="/uploads/an-introduction-to-siteleaf-anvil.jpg" alt="anvil" /></p>
+
+
+    
+    
+      <a href="/myBlog/blog/overview/" class="article__content__more">Read more</a>
+    
+  </section>
+</article>
+
+
+
+    </div>
+    <h1>footer</h1>
+
+  </body>
+</html>

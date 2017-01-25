@@ -1,6 +1,7 @@
 ---
-title: gallery
+title: Gallery
 permalink: "/gallery/"
-layout: default
+color: darkest-gray
+layout: gallery
 ---
 
